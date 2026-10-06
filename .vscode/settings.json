@@ -1,0 +1,50 @@
+{
+  "workbench.settings.editor": "json",
+
+  "latex-workshop.bibtex-format.sort.enabled": true,
+
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "same",
+
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.view.pdf.zoom": "100%",
+  "latex-workshop.view.pdf.viewer": "tab",
+
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex x2",
+      "tools": ["pdflatex", "pdflatex"]
+    }
+  ],
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "biber",
+      "command": "biber",
+      "args": [
+        "%DOCFILE%"
+      ]
+    }
+  ],
+
+  "latex-workshop.linting.chktex.enabled": true,
+  "latex-workshop.linting.chktex.exec.path": "chktex",
+  "latex-workshop.linting.chktex.exec.args": [
+    "-q"
+  ],
+
+  "latex-workshop.linting.run": "onSave",
+
+  "latex-utilities.countWord.path": "texcount",
+  "latex-utilities.countWord.args": []
+}
