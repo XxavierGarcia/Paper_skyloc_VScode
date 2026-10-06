@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.4)  6 OCT 2026 16:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.4)  6 OCT 2026 16:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -880,64 +880,64 @@ Package pdftex.def Info: figure-eps-converted-to.pdf  used on input line 275.
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 292.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 621.
+(Font)              scaled to size 9.49997pt on input line 617.
 LaTeX Font Info:    Font shape `T1/txss/m/it' in size <10> not available
-(Font)              Font shape `T1/txss/m/sl' tried instead on input line 621.
+(Font)              Font shape `T1/txss/m/sl' tried instead on input line 617.
 LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 621.
+(Font)              scaled to size 9.49997pt on input line 617.
 
 
-LaTeX Warning: Reference `eq:A90' on page 3 undefined on input line 625.
+LaTeX Warning: Reference `eq:A90' on page 3 undefined on input line 621.
 
 
-Package natbib Warning: Citation `abbott2020prospects' on page 3 undefined on input line 645.
+Package natbib Warning: Citation `abbott2020prospects' on page 3 undefined on input line 641.
 
 <Figures/cdf_90_area.png, id=28, 477.9456pt x 333.4056pt>
 File: Figures/cdf_90_area.png Graphic file (type png)
 <use Figures/cdf_90_area.png>
-Package pdftex.def Info: Figures/cdf_90_area.png  used on input line 649.
+Package pdftex.def Info: Figures/cdf_90_area.png  used on input line 645.
 (pdftex.def)             Requested size: 256.0748pt x 178.63222pt.
 
-LaTeX Warning: Reference `sec:antenna_pattern' on page 3 undefined on input line 665.
+LaTeX Warning: Reference `sec:antenna_pattern' on page 3 undefined on input line 661.
 
 <Figures/sky_area_vs_snr_hl.png, id=30, 875.4306pt x 333.4056pt>
 File: Figures/sky_area_vs_snr_hl.png Graphic file (type png)
 <use Figures/sky_area_vs_snr_hl.png>
-Package pdftex.def Info: Figures/sky_area_vs_snr_hl.png  used on input line 671.
+Package pdftex.def Info: Figures/sky_area_vs_snr_hl.png  used on input line 667.
 (pdftex.def)             Requested size: 256.0748pt x 97.52455pt.
 
-Package natbib Warning: Citation `singer2016constellations' on page 3 undefined on input line 683.
+Package natbib Warning: Citation `singer2016constellations' on page 3 undefined on input line 679.
 
 [3
 
 ]
 
-Package natbib Warning: Citation `ligo2026gwtc5' on page 4 undefined on input line 689.
+Package natbib Warning: Citation `ligo2026gwtc5' on page 4 undefined on input line 685.
 
 <Figures/constellation_vs_SNR_GWTC5.png, id=34, 477.9456pt x 333.4056pt>
 File: Figures/constellation_vs_SNR_GWTC5.png Graphic file (type png)
 <use Figures/constellation_vs_SNR_GWTC5.png>
-Package pdftex.def Info: Figures/constellation_vs_SNR_GWTC5.png  used on input line 700.
+Package pdftex.def Info: Figures/constellation_vs_SNR_GWTC5.png  used on input line 696.
 (pdftex.def)             Requested size: 256.0748pt x 178.63222pt.
 
-Package natbib Warning: Citation `hannuksela2020localizing' on page 4 undefined on input line 711.
+Package natbib Warning: Citation `hannuksela2020localizing' on page 4 undefined on input line 707.
 
 
-Package natbib Warning: Citation `li2026repeated' on page 4 undefined on input line 714.
+Package natbib Warning: Citation `li2026repeated' on page 4 undefined on input line 710.
 
 
-Package natbib Warning: Citation `virgo_o5_psd' on page 4 undefined on input line 766.
+Package natbib Warning: Citation `virgo_o5_psd' on page 4 undefined on input line 762.
 
 [4 <./Figures/cdf_90_area.png> <./Figures/sky_area_vs_snr_hl.png> <./Figures/constellation_vs_SNR_GWTC5.png>]
 <Figures/hl_vs_hlv_area90_scatter.png, id=42, 469.755pt x 397.485pt>
 File: Figures/hl_vs_hlv_area90_scatter.png Graphic file (type png)
 <use Figures/hl_vs_hlv_area90_scatter.png>
-Package pdftex.def Info: Figures/hl_vs_hlv_area90_scatter.png  used on input line 788.
+Package pdftex.def Info: Figures/hl_vs_hlv_area90_scatter.png  used on input line 784.
 (pdftex.def)             Requested size: 256.0748pt x 216.67657pt.
 <Figures/hl_vs_hlv_area90_slopechart.png, id=43, 433.62pt x 578.16pt>
 File: Figures/hl_vs_hlv_area90_slopechart.png Graphic file (type png)
 <use Figures/hl_vs_hlv_area90_slopechart.png>
-Package pdftex.def Info: Figures/hl_vs_hlv_area90_slopechart.png  used on input line 813.
+Package pdftex.def Info: Figures/hl_vs_hlv_area90_slopechart.png  used on input line 809.
 (pdftex.def)             Requested size: 256.0748pt x 341.44667pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -948,7 +948,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1089--1096
 
  []
 
@@ -959,11 +959,11 @@ Package epstopdf Info: Source file: <figure.eps>
 (epstopdf)                    date: 2026-09-04 11:07:03
 (epstopdf)                    size: 3222 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure-eps-converted-to.pdf figure.eps>
-(epstopdf)             \includegraphics on input line 1111.
+(epstopdf)             \includegraphics on input line 1107.
 Package epstopdf Info: Output file is already uptodate.
 File: figure-eps-converted-to.pdf Graphic file (type pdf)
 <use figure-eps-converted-to.pdf>
-Package pdftex.def Info: figure-eps-converted-to.pdf  used on input line 1111.
+Package pdftex.def Info: figure-eps-converted-to.pdf  used on input line 1107.
 (pdftex.def)             Requested size: 57.2136pt x 55.2061pt.
 [8
 
