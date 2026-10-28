@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.4)  6 OCT 2026 16:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.20)  28 OCT 2026 16:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -925,30 +925,49 @@ Package natbib Warning: Citation `hannuksela2020localizing' on page 4 undefined 
 
 Package natbib Warning: Citation `li2026repeated' on page 4 undefined on input line 710.
 
-
-Package natbib Warning: Citation `virgo_o5_psd' on page 4 undefined on input line 762.
-
 [4 <./Figures/cdf_90_area.png> <./Figures/sky_area_vs_snr_hl.png> <./Figures/constellation_vs_SNR_GWTC5.png>]
-<Figures/hl_vs_hlv_area90_scatter.png, id=42, 469.755pt x 397.485pt>
+<Figures/hl_vs_hlv_snr.png, id=42, 867.24pt x 433.62pt>
+File: Figures/hl_vs_hlv_snr.png Graphic file (type png)
+<use Figures/hl_vs_hlv_snr.png>
+Package pdftex.def Info: Figures/hl_vs_hlv_snr.png  used on input line 769.
+(pdftex.def)             Requested size: 418.82616pt x 209.41222pt.
+
+
+Package natbib Warning: Citation `virgo_o5_psd' on page 5 undefined on input line 785.
+
+<Figures/hl_vs_hlv_area90_scatter.png, id=43, 469.755pt x 397.485pt>
 File: Figures/hl_vs_hlv_area90_scatter.png Graphic file (type png)
 <use Figures/hl_vs_hlv_area90_scatter.png>
-Package pdftex.def Info: Figures/hl_vs_hlv_area90_scatter.png  used on input line 784.
+Package pdftex.def Info: Figures/hl_vs_hlv_area90_scatter.png  used on input line 808.
 (pdftex.def)             Requested size: 256.0748pt x 216.67657pt.
-<Figures/hl_vs_hlv_area90_slopechart.png, id=43, 433.62pt x 578.16pt>
+<Figures/hl_vs_hlv_area90_slopechart.png, id=44, 433.62pt x 794.97pt>
 File: Figures/hl_vs_hlv_area90_slopechart.png Graphic file (type png)
 <use Figures/hl_vs_hlv_area90_slopechart.png>
-Package pdftex.def Info: Figures/hl_vs_hlv_area90_slopechart.png  used on input line 809.
-(pdftex.def)             Requested size: 256.0748pt x 341.44667pt.
+Package pdftex.def Info: Figures/hl_vs_hlv_area90_slopechart.png  used on input line 837.
+(pdftex.def)             Requested size: 256.0748pt x 469.48918pt.
+<Figures/hl_vs_hlv_if_by_group.png, id=45, 542.025pt x 361.35pt>
+File: Figures/hl_vs_hlv_if_by_group.png Graphic file (type png)
+<use Figures/hl_vs_hlv_if_by_group.png>
+Package pdftex.def Info: Figures/hl_vs_hlv_if_by_group.png  used on input line 846.
+(pdftex.def)             Requested size: 256.0748pt x 170.72223pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 1331) in paragraph at lines 851--851
+\OML/txmi/m/it/10 A[]=A[]$\T1/txr/m/n/10 , for each event of the Virgo sub-sam-ple,
+ []
 
- [5 <./Figures/hl_vs_hlv_area90_scatter.png> <./Figures/hl_vs_hlv_area90_slopechart.png>] [6
 
-] [7
+Underfull \vbox (badness 1565) has occurred while \output is active []
+
+<Figures/img1_vs_img2_joint_colored.png, id=46, 738.88847pt x 347.18507pt>
+File: Figures/img1_vs_img2_joint_colored.png Graphic file (type png)
+<use Figures/img1_vs_img2_joint_colored.png>
+Package pdftex.def Info: Figures/img1_vs_img2_joint_colored.png  used on input line 944.
+(pdftex.def)             Requested size: 523.5307pt x 245.99455pt.
+ [5] [6 <./Figures/hl_vs_hlv_snr.png> <./Figures/hl_vs_hlv_area90_scatter.png>] [7 <./Figures/hl_vs_hlv_area90_slopechart.png> <./Figures/hl_vs_hlv_if_by_group.png>] [8 <./Figures/img1_vs_img2_joint_colored.png>] [9
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1089--1096
+Underfull \hbox (badness 10000) in paragraph at lines 1225--1232
 
  []
 
@@ -959,39 +978,39 @@ Package epstopdf Info: Source file: <figure.eps>
 (epstopdf)                    date: 2026-09-04 11:07:03
 (epstopdf)                    size: 3222 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure-eps-converted-to.pdf figure.eps>
-(epstopdf)             \includegraphics on input line 1107.
+(epstopdf)             \includegraphics on input line 1243.
 Package epstopdf Info: Output file is already uptodate.
 File: figure-eps-converted-to.pdf Graphic file (type pdf)
 <use figure-eps-converted-to.pdf>
-Package pdftex.def Info: figure-eps-converted-to.pdf  used on input line 1107.
+Package pdftex.def Info: figure-eps-converted-to.pdf  used on input line 1243.
 (pdftex.def)             Requested size: 57.2136pt x 55.2061pt.
-[8
+[10
 
 
-] [9] [10
-
-
-
-
-] [11] [12] [13
+] [11] [12
 
 
 
 
+] [13] [14] [15
 
-] [14]
+
+
+
+
+] [16]
 
 Package natbib Warning: There were undefined citations.
 
-[15
+[17
 
 
 
-] [16] [17
+] [18] [19
 
 
 
-] [18] (./aa_example.aux)
+] [20] (./aa_example.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
@@ -1002,18 +1021,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 9948 strings out of 467356
- 160723 string characters out of 5418692
- 713410 words of memory out of 6000000
- 38811 multiletter control sequences out of 15000+600000
- 741092 words of font info for 219 fonts, out of 8000000 for 9000
+ 9977 strings out of 467356
+ 161653 string characters out of 5418690
+ 713564 words of memory out of 6000000
+ 38838 multiletter control sequences out of 15000+600000
+ 742468 words of font info for 221 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,14n,93p,454b,762s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on aa_example.pdf (18 pages, 662569 bytes).
+ 87i,14n,93p,653b,762s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on aa_example.pdf (20 pages, 1077975 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 172 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 52 words of extra memory for PDF output out of 10000 (max. 10000000)
 

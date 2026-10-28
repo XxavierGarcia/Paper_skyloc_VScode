@@ -612,7 +612,7 @@ Mathieu et al.}
 \section{Results: sky localization with H1+L1}
 \label{sec:results_hl}
 
-We now assess the improvement in sky localization achieved by the coherent joint analysis of strongly lensed image pairs, relative to the analysis of each image in isolation, for the two-detector H1+L1 (HL) network under projected O5a sensitivity, across the full sample of 157 successfully analyzed events
+We now assess the improvement in sky localization achieved by the coherent joint analysis of strongly lensed image pairs, relative to the analysis of each image in isolation, for the two-detector H1+L1 (HL) network under projected O5a sensitivity, across the full sample of 157 successfully analyzed events.
 
 \subsection{90\% credible sky area}
 \label{sec:results_area90}
@@ -730,34 +730,57 @@ itself.
 The results of \S\ref{sec:results_hl} isolate the gain from a coherent joint
 analysis of two lensed images within a fixed two-detector network. We now
 ask a complementary question: how much further does sky localization
-improve when a third detector, Virgo, is added to the network, and does
+improve when a third detector, Virgo, is added to the network, and how does
 that gain depend on the geometry of the event relative to the H1-L1
-baseline?
+baseline and on its signal-to-noise ratio?
 
 \subsection{A stratified subsample, not a random one}
 \label{sec:virgo_subsample}
 
 Re-running the full 157-event population with Virgo added is
 computationally prohibitive within the scope of this work. We instead
-select a stratified subsample of 35 events, designed to probe four distinct
+select a stratified subsample of 40 events, designed to probe five distinct
 regimes of expected Virgo benefit, rather than drawing a random subset:
-\texttt{core} (the 15 events with the largest fractional SNR gain from
+\texttt{core} (the 16 events with the largest fractional SNR gain from
 adding V1, computed with the exact inner-product SNR estimator of
 \textsc{gwsnr}), \texttt{geom} (the 10 events for which neither lensed image
 is well aligned with the H1-L1 baseline, quantified by the angle between the
 source direction and the baseline at each image's arrival time, so that
 triangulation with H1+L1 alone is least reliable), \texttt{control} (5
 events with low expected SNR gain and good H1-L1 alignment, included as a
-null case), and \texttt{threshold} (5 events whose H1+L1 joint area sits
+null case), \texttt{threshold} (5 events whose H1+L1 joint area sits
 close to the $10\,\mathrm{deg}^2$ benchmark of \S\ref{sec:results_area90},
 where a modest absolute change in area has an outsized practical effect on
-follow-up feasibility).
+follow-up feasibility), and \texttt{low-SNR} (4 events with H1+L1 network
+SNR $\rho_{\rm HL} < 15$, among the faintest in the population, included to
+test how much Virgo can help when the signal itself is weak).
+
+Figure~\ref{fig:hl_vs_hlv_snr} shows the network SNR of every event with
+and without Virgo, with the five groups highlighted. We checked that this
+selection does not leave out events likely to benefit strongly from Virgo.
+Every event in the population with a fractional SNR gain above
+$\sim 19\,\%$ belongs to \texttt{core}, and all unselected events with
+$A_{90}^{\rm joint,\,HL} > 200\,\mathrm{deg}^2$ have a Virgo SNR
+$\rho_{\rm V1} = (\rho_{\rm HLV}^2 - \rho_{\rm HL}^2)^{1/2} \lesssim 10$,
+below that of the \texttt{core} events with similar HL areas.
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[width=0.8\hsize]{Figures/hl_vs_hlv_snr.png}
+    \caption{Network SNR with H1+L1+V1 ($\rho_{\rm HLV}$) versus H1+L1
+    ($\rho_{\rm HL}$) for the 157 events. Grey points are events not
+    selected for the Virgo analysis; colored points are the 40 events of
+    the stratified subsample, by selection group. The right panel zooms
+    into the low-SNR end, $13 < \rho_{\rm HL} < 20$. The dashed line marks
+    $\rho_{\rm HLV} = \rho_{\rm HL}$.}
+    \label{fig:hl_vs_hlv_snr}
+\end{figure*}
 
 Because this selection deliberately overrepresents events favorable to
 Virgo, the median statistics reported below describe this stratified
 subsample and \emph{must not} be compared directly to the population-level
 medians of \S\ref{sec:results_hl}. Instead, every comparison in this
-section is made event by event: the same 35 events are re-analyzed with the
+section is made event by event: the same 40 events are re-analyzed with the
 H1+L1+V1 (HLV) network, using the Virgo O5 low-sensitivity design curve
 \citep{virgo_o5_psd}, under the same pipeline, priors, and waveform model as
 the H1+L1 (HL) analysis, and the two outcomes for each event are compared
@@ -768,33 +791,36 @@ Appendix~\ref{app:virgo_table}.
 \label{sec:virgo_area}
 
 Figure~\ref{fig:hl_vs_hlv_scatter} shows the joint 90\% credible area with
-HLV against the same quantity with HL, for all 35 events. Every event falls
+HLV against the same quantity with HL, for all 40 events. Every event falls
 below the diagonal: adding Virgo improves the localization of every event
 in the subsample, with no exceptions. The per-event improvement factor,
 $\mathrm{IF}_{\rm Virgo} \equiv A_{90}^{\rm joint,\,HL}/A_{90}^{\rm joint,\,HLV}$,
-has a median of $13.3$ across the subsample (range $2.4$--$93.8$), and the
-median joint area drops from $71.2\,\mathrm{deg}^2$ (HL) to
-$8.8\,\mathrm{deg}^2$ (HLV). Twenty of the 35 events ($57.1\,\%$) fall below
+has a median of $11.5$ across the subsample (range $2.4$--$93.8$), and the
+median joint area drops from $109.0\,\mathrm{deg}^2$ (HL) to
+$10.0\,\mathrm{deg}^2$ (HLV). Twenty of the 40 events ($50\,\%$) fall below
 the $10\,\mathrm{deg}^2$ benchmark with Virgo, compared to a single event
 with H1+L1 alone. The median dominant-constellation fraction rises
-correspondingly, from $73.3\,\%$ (HL) to $99.5\,\%$ (HLV).
+correspondingly, from \textbf{XX}$\,\%$ (HL) to \textbf{XX}$\,\%$ (HLV).
+% TODO: constellation medians for the 40 events (old 35-event values: 73.3 and 99.5)
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\hsize]{Figures/hl_vs_hlv_area90_scatter.png}
     \caption{Joint 90\% credible area with H1+L1+V1 (HLV) versus H1+L1
-    (HL), for the 35-event stratified subsample, colored by selection
+    (HL), for the 40-event stratified subsample, colored by selection
     group. The dashed line marks equal area; every point falls below it.
     The dotted line marks $10\,\mathrm{deg}^2$.}
     \label{fig:hl_vs_hlv_scatter}
 \end{figure}
 
 Figure~\ref{fig:hl_vs_hlv_slopechart} shows the same comparison per event,
-as a slope chart grouped by selection category, making the heterogeneity of
-the gain across groups directly visible: the \texttt{core} and
-\texttt{geom} groups, selected respectively for high expected SNR gain and
-for poor H1-L1 geometric alignment, show the largest improvements (median
-$\mathrm{IF}_{\rm Virgo} = 15.8$ and $21.9$), while the \texttt{control}
+as a slope chart grouped by selection category, and
+Fig.~\ref{fig:hl_vs_hlv_if} summarizes the resulting improvement factors by
+group (see also Table~\ref{tab:virgo_groups}). The gain is clearly
+heterogeneous across groups: the \texttt{core} and \texttt{geom} groups,
+selected respectively for high expected SNR gain and for poor H1-L1
+geometric alignment, show the largest improvements (median
+$\mathrm{IF}_{\rm Virgo} = 14.6$ and $21.8$), while the \texttt{control}
 group, selected as a null case of low SNR gain and favorable H1-L1
 alignment, shows the smallest (median $3.4$). The \texttt{threshold} group,
 selected independently of either criterion, falls in between (median
@@ -802,16 +828,92 @@ $9.2$). This ordering confirms that the selection criteria used to build the
 subsample track the physical drivers of the Virgo gain: events that are
 geometrically degenerate under H1+L1, or that happen to be loud in Virgo,
 benefit the most, while events already well constrained by H1+L1
-triangulation gain comparatively little from a third detector.
+triangulation gain comparatively little from a third detector. The
+\texttt{low-SNR} group (median $7.7$) does not fit this simple ordering; we
+discuss it in \S\ref{sec:virgo_lowsnr}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\hsize]{Figures/hl_vs_hlv_area90_slopechart.png}
-    \caption{Joint 90\% credible area for each of the 35 events, with H1+L1
+    \caption{Joint 90\% credible area for each of the 40 events, with H1+L1
     (open markers) and H1+L1+V1 (filled markers), grouped by selection
     category. The dotted line marks $10\,\mathrm{deg}^2$.}
     \label{fig:hl_vs_hlv_slopechart}
 \end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\hsize]{Figures/hl_vs_hlv_if_by_group.png}
+    \caption{Improvement factor from adding Virgo,
+    $\mathrm{IF}_{\rm Virgo} = A_{90}^{\rm joint,\,HL}/A_{90}^{\rm joint,\,HLV}$,
+    for each event of the Virgo subsample, grouped by selection category.
+    Horizontal bars mark the group medians; the dashed line marks no
+    improvement.}
+    \label{fig:hl_vs_hlv_if}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\caption{Joint 90\% credible area and Virgo improvement factor by
+selection group.}
+\label{tab:virgo_groups}
+\begin{tabular}{lrrrrrr}
+\hline\hline
+Group & $N$ & $\tilde{A}_{90}^{\rm HL}$ & $\tilde{A}_{90}^{\rm HLV}$ &
+$\widetilde{\mathrm{IF}}_{\rm Virgo}$ & $N_{<10}^{\rm HL}$ &
+$N_{<10}^{\rm HLV}$ \\
+ & & [deg$^2$] & [deg$^2$] & & & \\
+\hline
+Core      & 16 & 186.6 & 12.0 & 14.6 & 1 & 6 \\
+Geom      & 10 & 335.9 &  5.9 & 21.8 & 0 & 7 \\
+Control   &  5 &  36.3 & 10.6 &  3.4 & 0 & 2 \\
+Threshold &  5 &  21.3 &  2.0 &  9.2 & 0 & 5 \\
+Low SNR   &  4 & 271.2 & 54.6 &  7.7 & 0 & 0 \\
+\hline
+All       & 40 & 109.0 & 10.0 & 11.5 & 1 & 20 \\
+\hline
+\end{tabular}
+\tablefoot{A tilde denotes the group median. $\tilde{A}_{90}$ is the
+median joint 90\% credible area with each network, and $N_{<10}$ the number
+of events with a joint area below $10\,\mathrm{deg}^2$.}
+\end{table}
+
+\subsection{Low-SNR events: a sizeable factor, but areas still too large}
+\label{sec:virgo_lowsnr}
+
+The \texttt{low-SNR} group was included as a second null case: with
+$\rho_{\rm HL} < 15$, these events carry little signal in Virgo, and we
+expected the gain from adding V1 to be small. Its median improvement
+factor, $\mathrm{IF}_{\rm Virgo} = 7.7$, is nevertheless larger than that
+of the \texttt{control} group ($3.4$). The reason is that
+$\mathrm{IF}_{\rm Virgo}$ is a ratio, and it grows with the HL area it
+starts from. The \texttt{low-SNR} events start from large HL areas
+($170$--$601\,\mathrm{deg}^2$, median $271\,\mathrm{deg}^2$), while the
+\texttt{control} events start from small ones ($13$--$91\,\mathrm{deg}^2$,
+median $36\,\mathrm{deg}^2$), which leave much less room for improvement.
+The two groups therefore cannot be compared directly.
+
+Comparing events at similar HL area instead reveals the expected effect of
+a low SNR (Fig.~\ref{fig:hl_vs_hlv_scatter}). The 12 \texttt{core} and
+\texttt{geom} events whose HL areas fall in the same range as the
+\texttt{low-SNR} group ($170$--$601\,\mathrm{deg}^2$) have a median
+$\mathrm{IF}_{\rm Virgo} = 22.5$ (range $6.0$--$68.6$), and all four
+\texttt{low-SNR} events ($3.6$--$10.4$) lie below 11 of these 12. A
+two-sided Mann-Whitney $U$ test gives $p \approx 0.008$. Since the
+\texttt{low-SNR} group contains only four events, and the comparison range
+is set by those same events, we read this as a clear trend rather than a
+precise measurement.
+
+For follow-up, what matters is the final area rather than the factor by
+which it shrinks. None of the four \texttt{low-SNR} events reaches the
+$10\,\mathrm{deg}^2$ benchmark with HLV: their joint areas remain between
+$16$ and $83\,\mathrm{deg}^2$ (median $55\,\mathrm{deg}^2$), whereas half
+of the subsample, including all five \texttt{threshold} events and 7 of the
+10 \texttt{geom} events, falls below it (Table~\ref{tab:virgo_groups}). For
+faint lensed pairs, adding Virgo still shrinks the sky area by a sizeable
+factor, but less than for louder events with similar HL areas, and the
+final area remains too large for efficient follow-up with wide-field
+telescopes.
 
 \subsection{The diminishing, but still positive, value of the lensed pair}
 \label{sec:virgo_diminishing}
@@ -819,20 +921,48 @@ triangulation gain comparatively little from a third detector.
 A natural question is whether the gain from combining two lensed images,
 the central result of \S\ref{sec:results_hl}, persists once a third
 detector is already available. Within the HL network, the median value of
-$\mathrm{IF}_{\rm joint}$ (Eq.~\eqref{eq:if_joint}) for this 35-event
-subsample is $4.68$, consistent with the $5.19$ found for the full
+$\mathrm{IF}_{\rm joint}$ (Eq.~\eqref{eq:if_joint}) for this 40-event
+subsample is $4.69$, consistent with the $5.19$ found for the full
 157-event population (\S\ref{sec:results_area90}) and confirming that the
 subsample is not biased with respect to this particular metric. Within the
 HLV network, the same quantity, which we denote $\mathrm{IF}_{\rm joint}^{\rm HLV}$
 to distinguish it from its HL counterpart $\mathrm{IF}_{\rm joint}^{\rm HL}$,
-drops to $2.20$.
+drops to $2.18$.
+
+Figure~\ref{fig:img1_vs_img2} shows this effect event by event. Each point
+places the single-image areas of image~1 and image~2 against each other,
+and its color gives the ratio of the joint area to the best single-image
+area, $A_{90}^{\rm joint}/A_{90}^{\rm best} = 1/\mathrm{IF}_{\rm joint}$.
+With HL, the joint analysis often reduces the area to $0.1$--$0.3$ times
+that of the best image. With HLV, the single-image areas are already
+smaller, typically by an order of magnitude or more, and the ratio lies
+mostly between $0.3$ and $1$: Virgo and the second image largely supply the
+same information.
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[width=\hsize]{Figures/img1_vs_img2_joint_colored.png}
+    \caption{90\% credible area of image~2 versus image~1, with H1+L1 (left)
+    and H1+L1+V1 (right), for the 40 events of the Virgo subsample. Marker
+    shape indicates the selection group, and color the ratio of the joint
+    area to the best single-image area (darker means a smaller gain from
+    the joint analysis). Grey dots in the left panel show the remaining 117
+    events of the full population, analyzed with H1+L1 only. The dashed
+    line marks equal areas.}
+    \label{fig:img1_vs_img2}
+\end{figure*}
 
 This does not mean that combining the two lensed images becomes
-uninformative once Virgo is added. Every event in the subsample still
-benefits from the joint analysis within the HLV network itself
-(Appendix~\ref{app:virgo_table}), and the absolute localization achieved by
-the HLV joint analysis remains, by a wide margin, the best result available
-for any of these events. What the drop in $\mathrm{IF}_{\rm joint}$
+uninformative once Virgo is added. All but one event in the subsample still
+benefit from the joint analysis within the HLV network itself
+(Appendix~\ref{app:virgo_table}). The exception, inj122, has both
+single-image HLV areas below $1\,\mathrm{deg}^2$, and its joint area
+($0.4\,\mathrm{deg}^2$) is slightly larger than the best single-image area
+($\mathrm{IF}_{\rm joint}^{\rm HLV} = 0.68$), a difference we attribute to
+the finite number of posterior samples and the sky-map resolution at this
+scale. The absolute localization achieved by the HLV joint analysis
+remains, by a wide margin, the best result available for any of these
+events. What the drop in $\mathrm{IF}_{\rm joint}$
 indicates is that the specific role played by the second lensed image,
 namely supplying an independent triangulation baseline through its
 different arrival time and antenna-pattern orientation, is partially
@@ -993,7 +1123,7 @@ teger tempus convallis augue. Etiam facilisis.
 \section{Full per-event results for the Virgo subsample}
 \label{app:virgo_table}
 
-Table~\ref{tab:virgo_35events} lists, for each of the 35 events analyzed
+Table~\ref{tab:virgo_subsample} lists, for each of the 40 events analyzed
 with H1+L1+V1 (\S\ref{sec:virgo}), the selection group, the joint 90\%
 credible area with H1+L1 (HL) and H1+L1+V1 (HLV), the per-event improvement
 factor from adding Virgo to the joint analysis ($\mathrm{IF}_{\rm Virgo}$),
@@ -1006,8 +1136,8 @@ $\mathrm{IF}_{\rm joint}^{\rm HLV}$), as discussed in
 
 \begin{table}[ht!]
 \centering
-\caption{Per-event sky-area results for the 35-event Virgo subsample.}
-\label{tab:virgo_35events}
+\caption{Per-event sky-area results for the 40-event Virgo subsample.}
+\label{tab:virgo_subsample}
 \begin{tabular}{llrrrrr}
 \hline\hline
 Event & Group & $A_{90}^{\rm joint,\,HL}$ & $A_{90}^{\rm joint,\,HLV}$ &
@@ -1028,6 +1158,7 @@ inj155 & Core & 173.7 & 13.3 & 13.03 & 5.51 & 1.29 \\
 inj083 & Core & 6.5 & 0.5 & 12.14 & 10.09 & 2.14 \\
 inj007 & Core & 96.6 & 9.4 & 10.22 & 10.12 & 1.47 \\
 inj068 & Core & 36.9 & 5.1 & 7.23 & 3.78 & 2.67 \\
+inj095 & Core & 299.1 & 50.0 & 5.98 & 5.41 & 1.74 \\
 inj109 & Core & 58.8 & 12.4 & 4.72 & 4.03 & 2.29 \\
 inj021 & Core & 44.7 & 18.1 & 2.47 & 11.15 & 1.58 \\
 \noalign{\smallskip}
@@ -1053,6 +1184,11 @@ inj101 & Threshold & 21.3 & 2.0 & 10.79 & 8.92 & 1.29 \\
 inj118 & Threshold & 16.4 & 1.8 & 9.24 & 1.48 & 2.75 \\
 inj138 & Threshold & 13.5 & 2.3 & 5.96 & 10.00 & 1.93 \\
 inj154 & Threshold & 25.6 & 4.3 & 5.95 & 10.58 & 4.01 \\
+\noalign{\smallskip}
+inj045 & Low SNR & 170.4 & 16.3 & 10.44 & 6.70 & 2.17 \\
+inj024 & Low SNR & 600.9 & 76.6 & 7.84 & 2.23 & 1.93 \\
+inj084 & Low SNR & 246.4 & 32.5 & 7.58 & 3.05 & 4.58 \\
+inj104 & Low SNR & 296.0 & 83.2 & 3.56 & 5.99 & 4.34 \\
 \hline
 \end{tabular}
 \end{table}
