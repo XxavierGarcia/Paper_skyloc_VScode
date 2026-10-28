@@ -26,6 +26,19 @@
                                 % For landscape tables, see the longtable examples.
 \usepackage{placeins}           % useful with \FloatBarrier, to keep 
                                 % onecolumn floats from drifting to the next section
+
+% Let large figures sit at the top of a column or page, so they do not
+% drift to the end of the paper
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.75}
+\renewcommand{\dbltopfraction}{0.9}
+\renewcommand{\dblfloatpagefraction}{0.75}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+\setcounter{dbltopnumber}{3}
                                 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage[options]{hyperref}
@@ -640,15 +653,17 @@ $10\,\mathrm{deg}^2$, the benchmark commonly adopted for host-galaxy
 identification and multimessenger follow-up with wide-field survey
 telescopes \citep{abbott2020prospects}.
 
-\begin{figure}[htbp]
+\begin{figure*}[htbp]
     \centering
-    \includegraphics[width=\hsize]{Figures/cdf_90_area.png}
+    \includegraphics[width=0.49\hsize]{Figures/cdf_90_area.png}
+    \hfill
+    \includegraphics[width=0.49\hsize]{Figures/pdf_90_area.png}
     \caption[CDF and PDF of $A_{90}$]{Cumulative (left) and probability
     density (right) distributions of the 90\% credible sky area, for the
     best single-image analysis and the joint analysis, across the 157
     analyzed events. The vertical dashed line marks $10\,\mathrm{deg}^2$.}
     \label{fig:cdf_pdf_area90}
-\end{figure}
+\end{figure*}
 
 \subsection{Dependence on network SNR}
 \label{sec:results_snr}
@@ -662,14 +677,18 @@ setting the localization precision of a two-detector network
 $A_{90}$ relative to either single image, with the largest gains occurring
 for events whose single-image areas are largest to begin with.
 
-\begin{figure}[htbp]
+\begin{figure*}[htbp]
     \centering
-    \includegraphics[width=\hsize]{Figures/sky_area_vs_snr_hl.png}
+    % The PNG holds both panels; each is cut out separately (300 dpi: 1 px = 0.24 bp)
+    % so that the two panels get the same spacing as in Fig.~\ref{fig:cdf_pdf_area90}
+    \includegraphics[width=0.50\hsize,trim={0 0 414bp 0},clip]{Figures/sky_area_vs_snr_hl.png}
+    \hfill
+    \includegraphics[width=0.452\hsize,trim={458.16bp 0 0 0},clip]{Figures/sky_area_vs_snr_hl.png}
     \caption{90\% credible sky area versus network SNR for image~1 (left)
     and image~2 (right). Blue crosses: single-image analysis; orange
     crosses: joint analysis for the same event.}
     \label{fig:area_vs_snr}
-\end{figure}
+\end{figure*}
 
 \subsection{Constellation localization}
 \label{sec:results_constellation}
@@ -766,7 +785,10 @@ below that of the \texttt{core} events with similar HL areas.
 
 \begin{figure*}[htbp]
     \centering
-    \includegraphics[width=0.8\hsize]{Figures/hl_vs_hlv_snr.png}
+    % The PNG holds both panels; each is cut out separately (250 dpi: 1 px = 0.288 bp)
+    \includegraphics[width=0.45\hsize,trim={0 0 426.82bp 0},clip]{Figures/hl_vs_hlv_snr.png}
+    \hspace{0.06\hsize}
+    \includegraphics[width=0.4393\hsize,trim={437.18bp 0 0 0},clip]{Figures/hl_vs_hlv_snr.png}
     \caption{Network SNR with H1+L1+V1 ($\rho_{\rm HLV}$) versus H1+L1
     ($\rho_{\rm HL}$) for the 157 events. Grey points are events not
     selected for the Virgo analysis; colored points are the 40 events of
@@ -790,6 +812,36 @@ Appendix~\ref{app:virgo_table}.
 \subsection{Sky area: HL versus HLV}
 \label{sec:virgo_area}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\hsize]{Figures/hl_vs_hlv_area90_scatter.png}
+    \caption{Joint 90\% credible area with H1+L1+V1 (HLV) versus H1+L1
+    (HL), for the 40-event stratified subsample, colored by selection
+    group. The dashed line marks equal area; every point falls below it.
+    The dotted line marks $10\,\mathrm{deg}^2$.}
+    \label{fig:hl_vs_hlv_scatter}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\hsize]{Figures/hl_vs_hlv_area90_slopechart.png}
+    \caption{Joint 90\% credible area for each of the 40 events, with H1+L1
+    (open markers) and H1+L1+V1 (filled markers), grouped by selection
+    category. The dotted line marks $10\,\mathrm{deg}^2$.}
+    \label{fig:hl_vs_hlv_slopechart}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\hsize]{Figures/hl_vs_hlv_if_by_group.png}
+    \caption{Improvement factor from adding Virgo,
+    $\mathrm{IF}_{\rm Virgo} = A_{90}^{\rm joint,\,HL}/A_{90}^{\rm joint,\,HLV}$,
+    for each event of the Virgo subsample, grouped by selection category.
+    Horizontal bars mark the group medians; the dashed line marks no
+    improvement.}
+    \label{fig:hl_vs_hlv_if}
+\end{figure}
+
 Figure~\ref{fig:hl_vs_hlv_scatter} shows the joint 90\% credible area with
 HLV against the same quantity with HL, for all 40 events. Every event falls
 below the diagonal: adding Virgo improves the localization of every event
@@ -800,18 +852,12 @@ median joint area drops from $109.0\,\mathrm{deg}^2$ (HL) to
 $10.0\,\mathrm{deg}^2$ (HLV). Twenty of the 40 events ($50\,\%$) fall below
 the $10\,\mathrm{deg}^2$ benchmark with Virgo, compared to a single event
 with H1+L1 alone. The median dominant-constellation fraction rises
-correspondingly, from \textbf{XX}$\,\%$ (HL) to \textbf{XX}$\,\%$ (HLV).
-% TODO: constellation medians for the 40 events (old 35-event values: 73.3 and 99.5)
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\hsize]{Figures/hl_vs_hlv_area90_scatter.png}
-    \caption{Joint 90\% credible area with H1+L1+V1 (HLV) versus H1+L1
-    (HL), for the 40-event stratified subsample, colored by selection
-    group. The dashed line marks equal area; every point falls below it.
-    The dotted line marks $10\,\mathrm{deg}^2$.}
-    \label{fig:hl_vs_hlv_scatter}
-\end{figure}
+correspondingly, from $65.6\,\%$ (HL) to $99.3\,\%$ (HLV), and the number
+of events with more than $90\,\%$ of the probability in a single
+constellation grows from 13 to 24. The constellation fraction is a coarse
+measure, however: for 5 of the 40 events it decreases
+even though the area shrinks, since a smaller region can still straddle a
+constellation boundary.
 
 Figure~\ref{fig:hl_vs_hlv_slopechart} shows the same comparison per event,
 as a slope chart grouped by selection category, and
@@ -831,26 +877,6 @@ benefit the most, while events already well constrained by H1+L1
 triangulation gain comparatively little from a third detector. The
 \texttt{low-SNR} group (median $7.7$) does not fit this simple ordering; we
 discuss it in \S\ref{sec:virgo_lowsnr}.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\hsize]{Figures/hl_vs_hlv_area90_slopechart.png}
-    \caption{Joint 90\% credible area for each of the 40 events, with H1+L1
-    (open markers) and H1+L1+V1 (filled markers), grouped by selection
-    category. The dotted line marks $10\,\mathrm{deg}^2$.}
-    \label{fig:hl_vs_hlv_slopechart}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\hsize]{Figures/hl_vs_hlv_if_by_group.png}
-    \caption{Improvement factor from adding Virgo,
-    $\mathrm{IF}_{\rm Virgo} = A_{90}^{\rm joint,\,HL}/A_{90}^{\rm joint,\,HLV}$,
-    for each event of the Virgo subsample, grouped by selection category.
-    Horizontal bars mark the group medians; the dashed line marks no
-    improvement.}
-    \label{fig:hl_vs_hlv_if}
-\end{figure}
 
 \begin{table}[htbp]
 \centering
@@ -881,6 +907,19 @@ of events with a joint area below $10\,\mathrm{deg}^2$.}
 \subsection{Low-SNR events: a sizeable factor, but areas still too large}
 \label{sec:virgo_lowsnr}
 
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[width=\hsize]{Figures/img1_vs_img2_joint_colored.png}
+    \caption{90\% credible area of image~2 versus image~1, with H1+L1 (left)
+    and H1+L1+V1 (right), for the 40 events of the Virgo subsample. Marker
+    shape indicates the selection group, and color the ratio of the joint
+    area to the best single-image area (darker means a smaller gain from
+    the joint analysis). Grey dots in the left panel show the remaining 117
+    events of the full population, analyzed with H1+L1 only. The dashed
+    line marks equal areas.}
+    \label{fig:img1_vs_img2}
+\end{figure*}
+
 The \texttt{low-SNR} group was included as a second null case: with
 $\rho_{\rm HL} < 15$, these events carry little signal in Virgo, and we
 expected the gain from adding V1 to be small. Its median improvement
@@ -900,20 +939,10 @@ a low SNR (Fig.~\ref{fig:hl_vs_hlv_scatter}). The 12 \texttt{core} and
 $\mathrm{IF}_{\rm Virgo} = 22.5$ (range $6.0$--$68.6$), and all four
 \texttt{low-SNR} events ($3.6$--$10.4$) lie below 11 of these 12. A
 two-sided Mann-Whitney $U$ test gives $p \approx 0.008$. Since the
-\texttt{low-SNR} group contains only four events, and the comparison range
-is set by those same events, we read this as a clear trend rather than a
-precise measurement.
+\texttt{low-SNR} group contains only four events, and the comparison range is set by those same events, we read this as a clear trend rather than a precise measurement.
 
-For follow-up, what matters is the final area rather than the factor by
-which it shrinks. None of the four \texttt{low-SNR} events reaches the
-$10\,\mathrm{deg}^2$ benchmark with HLV: their joint areas remain between
-$16$ and $83\,\mathrm{deg}^2$ (median $55\,\mathrm{deg}^2$), whereas half
-of the subsample, including all five \texttt{threshold} events and 7 of the
-10 \texttt{geom} events, falls below it (Table~\ref{tab:virgo_groups}). For
-faint lensed pairs, adding Virgo still shrinks the sky area by a sizeable
-factor, but less than for louder events with similar HL areas, and the
-final area remains too large for efficient follow-up with wide-field
-telescopes.
+For follow-up, what matters is the final area rather than the factor by which it shrinks. None of the four \texttt{low-SNR} events reaches the $10\,\mathrm{deg}^2$ benchmark with HLV: their joint areas remain between $16$ and $83\,\mathrm{deg}^2$ (median $55\,\mathrm{deg}^2$), whereas half of the subsample, including all five \texttt{threshold} events and 7 of the 10 \texttt{geom} events, falls below it (Table~\ref{tab:virgo_groups}). For faint lensed pairs, adding Virgo still shrinks the sky area by a sizeable
+factor, but less than for louder events with similar HL areas, and the final area remains too large for efficient follow-up with wide-field telescopes.
 
 \subsection{The diminishing, but still positive, value of the lensed pair}
 \label{sec:virgo_diminishing}
@@ -938,19 +967,6 @@ that of the best image. With HLV, the single-image areas are already
 smaller, typically by an order of magnitude or more, and the ratio lies
 mostly between $0.3$ and $1$: Virgo and the second image largely supply the
 same information.
-
-\begin{figure*}[htbp]
-    \centering
-    \includegraphics[width=\hsize]{Figures/img1_vs_img2_joint_colored.png}
-    \caption{90\% credible area of image~2 versus image~1, with H1+L1 (left)
-    and H1+L1+V1 (right), for the 40 events of the Virgo subsample. Marker
-    shape indicates the selection group, and color the ratio of the joint
-    area to the best single-image area (darker means a smaller gain from
-    the joint analysis). Grey dots in the left panel show the remaining 117
-    events of the full population, analyzed with H1+L1 only. The dashed
-    line marks equal areas.}
-    \label{fig:img1_vs_img2}
-\end{figure*}
 
 This does not mean that combining the two lensed images becomes
 uninformative once Virgo is added. All but one event in the subsample still
@@ -987,6 +1003,9 @@ specific geometric limitations the other leaves unaddressed.
 
 
 
+
+% Place any pending figures before the conclusions
+\FloatBarrier
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
