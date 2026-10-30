@@ -45,6 +45,8 @@
 % To add links in your PDF file, use the package "hyperref"
 % with options according to your LaTeX or PDFLaTeX drivers.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Clickable references to figures, tables, sections, equations and citations
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
 
 \begin{document}
 
@@ -109,6 +111,11 @@ binary black holes -- LIGO
 \section{Introduction}
 \lipsum[1]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ---------------------------------------------------------------
+% A&A template examples (citations, maths, figures, tables), hidden
+% from the PDF so that their example references do not break BibTeX.
+% Delete this block when it is no longer useful as a reference.
+\iffalse
 \section{Citations and maths examples}
 
    In this section the one-zone model of \citet{baker},
@@ -619,13 +626,13 @@ Mathieu et al.}
 \end{table}
 
 \newpage 
-
-
+\fi
+% ---------------------------------------------------------------
 
 \section{Results: sky localization with H1+L1}
 \label{sec:results_hl}
 
-We now assess the improvement in sky localization achieved by the coherent joint analysis of strongly lensed image pairs, relative to the analysis of each image in isolation, for the two-detector H1+L1 (HL) network under projected O5a sensitivity, across the full sample of 157 successfully analyzed events.
+We now assess the improvement in sky localization achieved by the coherent joint analysis of strongly lensed image pairs, relative to the analysis of each image in isolation, for the two-detector H1+L1 (HL) network under projected O5a sensitivity \citep{O5PSD}, across the full sample of 157 analyzed events.
 
 \subsection{90\% credible sky area}
 \label{sec:results_area90}
@@ -643,15 +650,13 @@ per-event improvement factor from combining the two images as
 Figure~\ref{fig:cdf_pdf_area90} shows the cumulative and probability density
 distributions of $A_{90}$ for the best single-image and joint analyses. The
 joint distribution is shifted to smaller areas across the entire sample: the
-median 90\% credible area drops from $562.5\,\mathrm{deg}^2$ (best single
-image) to $90.7\,\mathrm{deg}^2$ (joint), a median improvement factor of
-$\mathrm{IF}_{\rm joint} = 5.19$. The improvement is universal, with
-$\mathrm{IF}_{\rm joint} > 1$ for all 157 events (range $1.11$--$27.90$),
-confirming that the gain is systematic rather than driven by a handful of
-favorably placed sources. Six events ($3.8\,\%$) reach a joint area below
+median 90\% credible area drops from $562.5\,\mathrm{deg}^2$ (best single image) to $90.7\,\mathrm{deg}^2$ (joint), a median improvement factor of
+$\mathrm{IF}_{\rm joint} = 5.19$. The joint analysis reduces the sky area of every one of the 157 events, with $\mathrm{IF}_{\rm joint}$
+between $1.11$ and $27.90$. The improvement is therefore general, and does
+not come from just a few events with a favorable sky position. Six events ($3.8\,\%$) reach a joint area below
 $10\,\mathrm{deg}^2$, the benchmark commonly adopted for host-galaxy
 identification and multimessenger follow-up with wide-field survey
-telescopes \citep{abbott2020prospects}.
+telescopes \citep{Abbott2020Prospects}.
 
 \begin{figure*}[htbp]
     \centering
@@ -673,7 +678,7 @@ network SNR, for each image and for the joint analysis. The single-image
 areas show substantial scatter at fixed SNR, reflecting the dominant role of
 sky position and antenna pattern orientation, rather than SNR alone, in
 setting the localization precision of a two-detector network
-(\S\ref{sec:antenna_pattern}). The joint analysis consistently reduces
+(Sect.~\ref{sec:antenna_pattern}). The joint analysis consistently reduces
 $A_{90}$ relative to either single image, with the largest gains occurring
 for events whose single-image areas are largest to begin with.
 
@@ -695,20 +700,20 @@ for events whose single-image areas are largest to begin with.
 
 We further characterize the localization using the fraction of posterior
 probability contained in the dominant IAU constellation
-\citep{singer2016constellations}. For single-image analyses the median
+\citep{SingerPrice2016}. For single-image analyses the median
 fraction in the top constellation is $41.75\,\%$ (best of the two images).
 The joint analysis raises the median to $69.3\,\%$, with $121/157$ events
 ($77.1\,\%$) above $50\,\%$ and $49/157$ events ($31.2\,\%$) above $90\,\%$.
 
 Comparing against the published sky maps of 104 GWTC-5 events
-\citep{ligo2026gwtc5}, we find that the joint lensed-pair analysis with only
+\citep{GWTC5}, we find that the joint lensed-pair analysis with only
 two detectors reaches constellation fractions comparable to those achieved
 by the three-detector HLV network on real data, whereas real HL-only events
 are confined below $\sim 50\,\%$ (Fig.~\ref{fig:constellation_gwtc5}). This
 places the improvement from the joint lensed analysis on a comparable
 footing to the localization gain from adding a third detector, using only
 two detectors and a repeated observation of the same source, a connection
-we examine directly in \S\ref{sec:virgo}.
+we examine directly in Sect.~\ref{sec:virgo}.
 
 \begin{figure}[htbp]
     \centering
@@ -723,12 +728,12 @@ we examine directly in \S\ref{sec:virgo}.
 \subsection{Comparison with previous work}
 \label{sec:results_comparison}
 
-\citet{hannuksela2020localizing} demonstrated that quadruply lensed events
+\citet{hubble_constant_lensing} demonstrated that quadruply lensed events
 observed by the full LIGO/Virgo/KAGRA network can, combined with
 electromagnetic constraints on the lens galaxy, be localized to one or a few
-candidate host galaxies. \citet{li2026repeated} performed the first
+candidate host galaxies. \citet{Hannuksela_skyloc} performed the first
 systematic study of repeated-signal localization using
-\textsc{Bayestar} sky maps on a simulated population observed with the
+\textsc{Bayestar} \citep{SingerPrice2016} sky maps on a simulated population observed with the
 three-detector HLV network, finding roughly an order-of-magnitude reduction
 in the 90\% credible area from combining two images. The smaller median
 improvement factor found here ($5.19$) is consistent with the more
@@ -739,14 +744,14 @@ for a second image, which acts through the same antenna-pattern channel, to
 improve upon it. Both studies nonetheless converge on the same qualitative
 conclusion, namely that combining two lensed images yields a substantial and
 consistent sky localization gain regardless of detector network or analysis
-method. \S\ref{sec:virgo} tests this conclusion directly by asking how the
+method. Section~\ref{sec:virgo} tests this conclusion directly by asking how the
 gain from the lensed pair interacts with growing the detector network
 itself.
 
 \section{Adding a third detector: Virgo}
 \label{sec:virgo}
 
-The results of \S\ref{sec:results_hl} isolate the gain from a coherent joint
+The results of Sect.~\ref{sec:results_hl} isolate the gain from a coherent joint
 analysis of two lensed images within a fixed two-detector network. We now
 ask a complementary question: how much further does sky localization
 improve when a third detector, Virgo, is added to the network, and how does
@@ -762,13 +767,13 @@ select a stratified subsample of 40 events, designed to probe five distinct
 regimes of expected Virgo benefit, rather than drawing a random subset:
 \texttt{core} (the 16 events with the largest fractional SNR gain from
 adding V1, computed with the exact inner-product SNR estimator of
-\textsc{gwsnr}), \texttt{geom} (the 10 events for which neither lensed image
+\textsc{gwsnr}; \citealt{gwsnrpythonpackageefficient}), \texttt{geom} (the 10 events for which neither lensed image
 is well aligned with the H1-L1 baseline, quantified by the angle between the
 source direction and the baseline at each image's arrival time, so that
 triangulation with H1+L1 alone is least reliable), \texttt{control} (5
 events with low expected SNR gain and good H1-L1 alignment, included as a
 null case), \texttt{threshold} (5 events whose H1+L1 joint area sits
-close to the $10\,\mathrm{deg}^2$ benchmark of \S\ref{sec:results_area90},
+close to the $10\,\mathrm{deg}^2$ benchmark of Sect.~\ref{sec:results_area90},
 where a modest absolute change in area has an outsized practical effect on
 follow-up feasibility), and \texttt{low-SNR} (4 events with H1+L1 network
 SNR $\rho_{\rm HL} < 15$, among the faintest in the population, included to
@@ -801,10 +806,10 @@ below that of the \texttt{core} events with similar HL areas.
 Because this selection deliberately overrepresents events favorable to
 Virgo, the median statistics reported below describe this stratified
 subsample and \emph{must not} be compared directly to the population-level
-medians of \S\ref{sec:results_hl}. Instead, every comparison in this
+medians of Sect.~\ref{sec:results_hl}. Instead, every comparison in this
 section is made event by event: the same 40 events are re-analyzed with the
 H1+L1+V1 (HLV) network, using the Virgo O5 low-sensitivity design curve
-\citep{virgo_o5_psd}, under the same pipeline, priors, and waveform model as
+\citep{T2000012}, under the same pipeline, priors, and waveform model as
 the H1+L1 (HL) analysis, and the two outcomes for each event are compared
 directly. The full per-event table is given in
 Appendix~\ref{app:virgo_table}.
@@ -876,7 +881,7 @@ geometrically degenerate under H1+L1, or that happen to be loud in Virgo,
 benefit the most, while events already well constrained by H1+L1
 triangulation gain comparatively little from a third detector. The
 \texttt{low-SNR} group (median $7.7$) does not fit this simple ordering; we
-discuss it in \S\ref{sec:virgo_lowsnr}.
+discuss it in Sect.~\ref{sec:virgo_lowsnr}.
 
 \begin{table}[htbp]
 \centering
@@ -937,8 +942,7 @@ a low SNR (Fig.~\ref{fig:hl_vs_hlv_scatter}). The 12 \texttt{core} and
 \texttt{geom} events whose HL areas fall in the same range as the
 \texttt{low-SNR} group ($170$--$601\,\mathrm{deg}^2$) have a median
 $\mathrm{IF}_{\rm Virgo} = 22.5$ (range $6.0$--$68.6$), and all four
-\texttt{low-SNR} events ($3.6$--$10.4$) lie below 11 of these 12. A
-two-sided Mann-Whitney $U$ test gives $p \approx 0.008$. Since the
+\texttt{low-SNR} events ($3.6$--$10.4$) lie below 11 of these 12. Since the
 \texttt{low-SNR} group contains only four events, and the comparison range is set by those same events, we read this as a clear trend rather than a precise measurement.
 
 For follow-up, what matters is the final area rather than the factor by which it shrinks. None of the four \texttt{low-SNR} events reaches the $10\,\mathrm{deg}^2$ benchmark with HLV: their joint areas remain between $16$ and $83\,\mathrm{deg}^2$ (median $55\,\mathrm{deg}^2$), whereas half of the subsample, including all five \texttt{threshold} events and 7 of the 10 \texttt{geom} events, falls below it (Table~\ref{tab:virgo_groups}). For faint lensed pairs, adding Virgo still shrinks the sky area by a sizeable
@@ -948,11 +952,11 @@ factor, but less than for louder events with similar HL areas, and the final are
 \label{sec:virgo_diminishing}
 
 A natural question is whether the gain from combining two lensed images,
-the central result of \S\ref{sec:results_hl}, persists once a third
+the central result of Sect.~\ref{sec:results_hl}, persists once a third
 detector is already available. Within the HL network, the median value of
 $\mathrm{IF}_{\rm joint}$ (Eq.~\eqref{eq:if_joint}) for this 40-event
 subsample is $4.69$, consistent with the $5.19$ found for the full
-157-event population (\S\ref{sec:results_area90}) and confirming that the
+157-event population (Sect.~\ref{sec:results_area90}) and confirming that the
 subsample is not biased with respect to this particular metric. Within the
 HLV network, the same quantity, which we denote $\mathrm{IF}_{\rm joint}^{\rm HLV}$
 to distinguish it from its HL counterpart $\mathrm{IF}_{\rm joint}^{\rm HL}$,
@@ -992,8 +996,8 @@ without vanishing, as the network's own triangulation power increases.
 \subsection{Comparison with the literature}
 \label{sec:virgo_comparison}
 
-These results extend the central finding of \S\ref{sec:results_comparison}
-along a second, complementary axis: while \S\ref{sec:results_hl} shows that
+These results extend the central finding of Sect.~\ref{sec:results_comparison}
+along a second, complementary axis: while Sect.~\ref{sec:results_hl} shows that
 repeating an observation through a lensed image pair substantially improves
 localization within a fixed detector network, the present section shows
 that growing the detector network itself delivers a comparable, and in the
@@ -1033,39 +1037,10 @@ teger tempus convallis augue. Etiam facilisis.
 % - join the .bib files when you upload your source files
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{thebibliography}{}
-
-  \bibitem[Baker(1966)]{baker} Baker, N. 1966,
-      in Stellar Evolution,
-      ed.\ R. F. Stein,\& A. G. W. Cameron
-      (Plenum, New York) 333
-
-   \bibitem[Balluch(1988)]{balluch} Balluch, M. 1988,
-      A\&A, 200, 58
-
-   \bibitem[Cox(1980)]{cox} Cox, J. P. 1980,
-      Theory of Stellar Pulsation
-      (Princeton University Press, Princeton) 165
-
-   \bibitem[Cox(1969)]{cox69} Cox, A. N.,\& Stewart, J. N. 1969,
-      Academia Nauk, Scientific Information 15, 1
-
-   \bibitem[Mizuno(1980)]{mizuno} Mizuno H. 1980,
-      Prog. Theor. Phys., 64, 544
-   
-   \bibitem[Tscharnuter(1987)]{tscharnuter} Tscharnuter W. M. 1987,
-      A\&A, 188, 55
-  
-   \bibitem[Terlevich(1992)]{terlevich} Terlevich, R. 1992, in ASP Conf. Ser. 31,
-      Relationships between Active Galactic Nuclei and Starburst Galaxies,
-      ed. A. V. Filippenko, 13
-
-   \bibitem[Yorke(1980a)]{yorke80a} Yorke, H. W. 1980a,
-      A\&A, 86, 286
-
-   \bibitem[Zheng(1997)]{zheng} Zheng, W., Davidsen, A. F., Tytler, D. \& Kriss, G. A.
-      1997, preprint
-\end{thebibliography}
+% References come from references.bib (copied from the TFM bibliography).
+% Compile with pdflatex -> bibtex -> pdflatex -> pdflatex.
+\bibliographystyle{Bibtex/aa}
+\bibliography{references}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1143,19 +1118,21 @@ teger tempus convallis augue. Etiam facilisis.
 \label{app:virgo_table}
 
 Table~\ref{tab:virgo_subsample} lists, for each of the 40 events analyzed
-with H1+L1+V1 (\S\ref{sec:virgo}), the selection group, the joint 90\%
+with H1+L1+V1 (Sect.~\ref{sec:virgo}), the selection group, the joint 90\%
 credible area with H1+L1 (HL) and H1+L1+V1 (HLV), the per-event improvement
 factor from adding Virgo to the joint analysis ($\mathrm{IF}_{\rm Virgo}$),
 and the improvement factor from combining the two lensed images within each
 network separately ($\mathrm{IF}_{\rm joint}^{\rm HL}$,
 $\mathrm{IF}_{\rm joint}^{\rm HLV}$), as discussed in
-\S\ref{sec:virgo_diminishing}.
+Sect.~\ref{sec:virgo_diminishing}.
 
 
 
 \begin{table}[ht!]
 \centering
-\caption{Per-event sky-area results for the 40-event Virgo subsample.}
+\caption{Per-event sky-area results for the 40-event Virgo subsample.
+  Events are grouped by selection group and, within each group, sorted by
+  decreasing $\mathrm{IF}_{\rm Virgo}$.}
 \label{tab:virgo_subsample}
 \begin{tabular}{llrrrrr}
 \hline\hline

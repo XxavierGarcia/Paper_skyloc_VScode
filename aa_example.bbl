@@ -1,0 +1,28 @@
+\begin{thebibliography}{8}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Abbott {et~al.}(2020)}]{Abbott2020Prospects}
+Abbott, B.~P. {et~al.} 2020, Living Reviews in Relativity, 23, 3
+
+\bibitem[{Hannuksela {et~al.}(2020)Hannuksela, Collett, Çalışkan, \& Li}]{hubble_constant_lensing}
+Hannuksela, O.~A., Collett, T.~E., Çalışkan, M., \& Li, T. G.~F. 2020, Monthly Notices of the Royal Astronomical Society, 498, 3395
+
+\bibitem[{Li \& Hannuksela(2026)}]{Hannuksela_skyloc}
+Li, A. K.~Y. \& Hannuksela, O.~A. 2026, arXiv e-prints, arXiv:2604.16561
+
+\bibitem[{{LIGO Scientific Collaboration}(2025)}]{O5PSD}
+{LIGO Scientific Collaboration}. 2025, {A+/O5 strain noise curve projections}, Tech. Rep. LIGO-T2500310-v2, LIGO
+
+\bibitem[{{LIGO Scientific, Virgo and KAGRA Collaborations}(2022)}]{T2000012}
+{LIGO Scientific, Virgo and KAGRA Collaborations}. 2022, {Noise curves used for Simulations in the update of the Observing Scenarios Paper}, Tech. Rep. LIGO-T2000012-v2, LIGO
+
+\bibitem[{Phurailatpam \& Hannuksela(2026)}]{gwsnrpythonpackageefficient}
+Phurailatpam, H. \& Hannuksela, O.~A. 2026, arXiv e-prints, arXiv:2412.09888
+
+\bibitem[{Singer \& Price(2016)}]{SingerPrice2016}
+Singer, L.~P. \& Price, L.~R. 2016, Phys. Rev. D, 93, 024013
+
+\bibitem[{{The LIGO Scientific Collaboration} {et~al.}(2026){The LIGO Scientific Collaboration}, {the Virgo Collaboration}, {the KAGRA Collaboration}, Abac, Abe, Abouelfettouh, {et~al.}}]{GWTC5}
+{The LIGO Scientific Collaboration}, {the Virgo Collaboration}, {the KAGRA Collaboration}, {et~al.} 2026, arXiv e-prints, arXiv:2605.27223
+
+\end{thebibliography}
