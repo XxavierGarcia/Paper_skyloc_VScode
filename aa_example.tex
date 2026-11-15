@@ -629,6 +629,98 @@ Mathieu et al.}
 \fi
 % ---------------------------------------------------------------
 
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Sky localization of a lensed pair}
+\label{sec:antenna_pattern}
+
+The sky localization of a gravitational-wave source relies mainly on
+triangulation: the difference in arrival time between detectors constrains
+the direction of propagation, while the antenna pattern functions and the
+measured amplitudes add complementary information \citep{triangulation_GW}.
+With only two detectors, the arrival-time difference confines the source to
+a ring on the sky around the axis joining them, which the antenna pattern
+reduces to one or two extended arcs. A single image observed by H1 and L1
+is therefore typically localized to hundreds of square degrees.
+
+The images of a strongly lensed source come from the same sky position but
+reach the detectors at different times, separated by minutes to months for
+galaxy-scale lenses. The Earth rotates in between, so each image is seen
+with a different orientation of the detector network, and hence with a
+different ring and a different antenna pattern
+\citep{Hannuksela_skyloc,hubble_constant_lensing}. Requiring the two images
+to share one sky position keeps only the region where the two constraints
+overlap. This is the mechanism studied in this work.
+
+\subsection{Simulated lensed population}
+\label{sec:population}
+
+We generate a population of strongly lensed binary black holes with
+\textsc{LeR} v0.4.2
+\citep{phurailatpam2026lerlvkligovirgokagracollaboration}, using its default
+source and lens models: galaxy-scale lenses described by an elliptical
+power law with external shear \citep{Tessore2015}, in the geometric optics
+regime. Signal-to-noise ratios (SNRs) are computed for the H1+L1 network
+with the projected O5a sensitivity \citep{O5PSD} and the
+\texttt{IMRPhenomXPHM} waveform model \citep{IMRPhenomXPHM}. We draw events
+until 500 of them have at least two images with network SNR
+$\rho_{\rm net} \geq 10$.
+
+To mimic realistic observing conditions we then apply a duty-cycle filter:
+for each image, H1 and L1 are each taken to be observing with probability
+$0.70$, independently. An image is kept only if both detectors are
+observing and $\rho_{\rm net} \geq 10$. Events with fewer than two
+surviving images are discarded, and when more than two survive we keep the
+two with the highest network SNR. This leaves the 157 lensed pairs
+analyzed in this work.
+
+\subsection{Parameter estimation}
+\label{sec:pe}
+
+Each image is injected into Gaussian noise colored by the O5a sensitivity
+and analyzed on its own with \textsc{Bilby}
+\citep{BILBY,bilby_pipe_paper}, as an ordinary, unlensed signal. Injection
+and recovery both use the \texttt{IMRPhenomXPNR} waveform model
+\citep{IMRPhenomXPNR}. We sample with \textsc{Dynesty} \citep{MCMC_vs_NS},
+using 1000 live points and combining three independent runs per image. The
+analysis band is $20$--$896\,\mathrm{Hz}$. The prior is isotropic in sky
+position and uniform in luminosity distance between $50$ and
+$20\,000\,\mathrm{Mpc}$, and the chirp mass prior spans $\pm 30\,\%$ around
+the injected value.
+
+The two images of each pair are then analyzed jointly with \textsc{Hanabi}
+\citep{PE_lensing_bayes}, under the hypothesis that they are lensed images
+of the same source. The joint likelihood is the product of the two
+single-image likelihoods evaluated at common values of the masses, spins,
+sky position, inclination, polarization angle, and coalescence phase. The
+luminosity distance and the arrival time are fitted separately for each
+image, which absorbs the magnification and the time delay, and the image
+type (which sets the Morse phase) is sampled for each image from a discrete
+uniform prior over the three types. Sampler settings are the same as in
+the single-image runs.
+
+\subsection{Sky maps and localization metrics}
+\label{sec:skymaps}
+
+For every pair we build three sky maps, one per image and one for the joint
+analysis, from the posterior samples in right ascension $\alpha$ and
+declination $\delta$. The samples are collected with \textsc{PESummary}
+\citep{PESummary} and converted into HEALPix maps \citep{Gorski2005} with
+\texttt{ligo-skymap-from-samples}, which applies a kernel density estimate
+\citep{SingerPrice2016}. Our main metric is the 90\,\% credible area
+$A_{90}$, the area of the smallest sky region $\mathcal{R}_{90}$ that
+satisfies
+\begin{equation}
+    \int_{\mathcal{R}_{90}} p(\alpha, \delta \mid d)\, \mathrm{d}\Omega = 0.90 ,
+    \label{eq:A90}
+\end{equation}
+where $p(\alpha, \delta \mid d)$ is the posterior marginalized over all
+other parameters and $\mathrm{d}\Omega = \cos\delta\,\mathrm{d}\alpha\,
+\mathrm{d}\delta$. As a second metric we use the fraction of posterior
+probability contained in the single most probable constellation, computed
+with \texttt{ligo-skymap-constellations}.
+
 \section{Results: sky localization with H1+L1}
 \label{sec:results_hl}
 
