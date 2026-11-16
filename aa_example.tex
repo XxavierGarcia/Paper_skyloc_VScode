@@ -651,7 +651,8 @@ with a different orientation of the detector network, and hence with a
 different ring and a different antenna pattern
 \citep{Hannuksela_skyloc,hubble_constant_lensing}. Requiring the two images
 to share one sky position keeps only the region where the two constraints
-overlap. This is the mechanism studied in this work.
+overlap. We test this mechanism directly in
+Sect.~\ref{sec:results_timedelay}.
 
 \subsection{Simulated lensed population}
 \label{sec:population}
@@ -684,7 +685,7 @@ and analyzed on its own with \textsc{Bilby}
 and recovery both use the \texttt{IMRPhenomXPNR} waveform model
 \citep{IMRPhenomXPNR}. We sample with \textsc{Dynesty} \citep{MCMC_vs_NS},
 using 1000 live points and combining three independent runs per image. The
-analysis band is $20$--$896\,\mathrm{Hz}$. The prior is isotropic in sky
+analysis band is $20$-$896\,\mathrm{Hz}$. The prior is isotropic in sky
 position and uniform in luminosity distance between $50$ and
 $20\,000\,\mathrm{Mpc}$, and the chirp mass prior spans $\pm 30\,\%$ around
 the injected value.
@@ -721,7 +722,25 @@ other parameters and $\mathrm{d}\Omega = \cos\delta\,\mathrm{d}\alpha\,
 probability contained in the single most probable constellation, computed
 with \texttt{ligo-skymap-constellations}.
 
-\section{Results: sky localization with H1+L1}
+As a check of the sky maps, we count how often the injected sky position
+lies inside the 90\,\% credible region. This is the case for 129 of the 157
+maps of image~1 ($82\,\%$), 129 of those of image~2 ($82\,\%$), and 131 of
+the joint maps ($83\,\%$), whereas $141 \pm 4$ are expected for perfectly
+calibrated maps. The credible regions are therefore somewhat too small:
+a credible level of about $96\,\%$ is needed to contain $90\,\%$ of the
+injected positions. The deficit is already present in the posterior
+samples, most clearly in declination, so it is not introduced by the
+kernel density estimate. A likely contribution is that the injections are
+drawn from the astrophysical population of Sect.~\ref{sec:population}
+rather than from the priors of the analysis (Sect.~\ref{sec:pe}), since
+calibrated coverage is only guaranteed when the two coincide. Because
+the deficit is similar for the single-image and joint
+maps, it affects the improvement factors reported below, which are ratios
+of areas, less than the absolute areas. Computing them from the 50\,\%
+instead of the 90\,\% credible regions changes the median improvement
+factor of the joint analysis only from $5.2$ to $4.8$.
+
+\section{Sky localization with the H1+L1 network}
 \label{sec:results_hl}
 
 We now assess the improvement in sky localization achieved by the coherent joint analysis of strongly lensed image pairs, relative to the analysis of each image in isolation, for the two-detector H1+L1 (HL) network under projected O5a sensitivity \citep{O5PSD}, across the full sample of 157 analyzed events.
@@ -750,6 +769,29 @@ $10\,\mathrm{deg}^2$, the benchmark commonly adopted for host-galaxy
 identification and multimessenger follow-up with wide-field survey
 telescopes \citep{Abbott2020Prospects}.
 
+Figure~\ref{fig:skymap_example} shows a typical example, the pair inj002,
+whose images arrive $5.6$ hours apart. Image~1 alone is localized to a long
+arc of $978\,\mathrm{deg}^2$, the characteristic shape for a two-detector
+network, and image~2 to $430\,\mathrm{deg}^2$. The joint analysis reduces
+the area to $27\,\mathrm{deg}^2$, $16$ times smaller than that of the best
+single image.
+
+\begin{figure*}[htbp]
+    \centering
+    % 100 dpi PNGs: 1 px = 0.72 bp; trim = {left bottom right top}
+    \includegraphics[width=0.32\hsize,trim={50.4bp 98.6bp 38.9bp 83.5bp},clip]{Figures/inj002_skyloc_img1.png}
+    \hfill
+    \includegraphics[width=0.32\hsize,trim={50.4bp 98.6bp 38.9bp 83.5bp},clip]{Figures/inj002_skyloc_img2.png}
+    \hfill
+    \includegraphics[width=0.32\hsize,trim={50.4bp 98.6bp 38.9bp 83.5bp},clip]{Figures/inj002_skyloc_joint.png}
+    \caption{Sky maps of the pair inj002, whose images are separated by
+    $5.6$ hours: image~1 (left, $A_{90} = 978\,\mathrm{deg}^2$), image~2
+    (center, $430\,\mathrm{deg}^2$), and the joint analysis (right,
+    $27\,\mathrm{deg}^2$). Contours enclose the 50\% and 90\% credible
+    regions.}
+    \label{fig:skymap_example}
+\end{figure*}
+
 \begin{figure*}[htbp]
     \centering
     \includegraphics[width=0.49\hsize]{Figures/cdf_90_area.png}
@@ -761,6 +803,51 @@ telescopes \citep{Abbott2020Prospects}.
     analyzed events. The vertical dashed line marks $10\,\mathrm{deg}^2$.}
     \label{fig:cdf_pdf_area90}
 \end{figure*}
+
+\subsection{Dependence on the time delay}
+\label{sec:results_timedelay}
+
+The mechanism described in Sect.~\ref{sec:antenna_pattern} makes a direct
+prediction: the gain from the joint analysis should depend on how much the
+detector network has rotated between the two images, and not on the time
+delay itself. The orientation of the network with respect to the source
+repeats every sidereal day. We therefore measure the rotation by the
+number of sidereal hours, between 0 and 12, that separate the time delay
+from the nearest whole number of sidereal days; one hour corresponds to a
+rotation of $15^\circ$.
+
+Figure~\ref{fig:if_vs_rotation} shows $\mathrm{IF}_{\rm joint}$ against
+this quantity for the 157 pairs. The two are strongly correlated (Spearman
+rank coefficient $0.69$). The 60 pairs with less than one hour of rotation
+have a median $\mathrm{IF}_{\rm joint} = 2.1$, against $8.3$ for the
+remaining 97 pairs. All 36 pairs with $\mathrm{IF}_{\rm joint} > 10$ have
+more than one hour of rotation, and 24 of the 25 pairs with
+$\mathrm{IF}_{\rm joint} < 2$ have less. The gain rises steeply between
+about $0.3$ and $3$ hours and then flattens: once the network has turned by
+a few tens of degrees, further rotation brings no additional improvement on
+average.
+
+What matters is the rotation and not the length of the delay. Of the 60
+pairs with less than one hour of rotation, 49 have time delays shorter than
+one hour, but the other 11 have delays between 1 and 86 days that happen to
+fall close to a whole number of sidereal days, and their median
+$\mathrm{IF}_{\rm joint}$ is $1.8$. In all these pairs the two images are
+observed with nearly the same network orientation, so the second image adds
+SNR but almost no new geometric information. Their improvement factors are
+close to the factor of 2 expected from combining two measurements of similar
+SNR, given that the localization area scales as the inverse square of the
+SNR \citep{triangulation_GW}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\hsize]{Figures/if_joint_vs_earth_rotation.png}
+    \caption{Improvement factor of the joint analysis versus the Earth
+    rotation between the arrival of the two images, measured as the
+    difference between the time delay and the nearest whole number of
+    sidereal days. Pairs below $0.01$ hours are drawn at the left edge, and
+    the dashed line marks one hour ($15^\circ$).}
+    \label{fig:if_vs_rotation}
+\end{figure}
 
 \subsection{Dependence on network SNR}
 \label{sec:results_snr}
@@ -827,30 +914,30 @@ candidate host galaxies. \citet{Hannuksela_skyloc} performed the first
 systematic study of repeated-signal localization using
 \textsc{Bayestar} \citep{SingerPrice2016} sky maps on a simulated population observed with the
 three-detector HLV network, finding roughly an order-of-magnitude reduction
-in the 90\% credible area from combining two images. The smaller median
-improvement factor found here ($5.19$) is consistent with the more
-conservative two-detector configuration adopted in this work: with only H1
-and L1, single-image localization already relies more heavily on antenna
-pattern information than on triangulation, leaving comparatively less room
-for a second image, which acts through the same antenna-pattern channel, to
-improve upon it. Both studies nonetheless converge on the same qualitative
-conclusion, namely that combining two lensed images yields a substantial and
-consistent sky localization gain regardless of detector network or analysis
-method. Section~\ref{sec:virgo} tests this conclusion directly by asking how the
-gain from the lensed pair interacts with growing the detector network
-itself.
+in the 90\% credible area from combining two images. Our median improvement
+factor for H1+L1, $5.19$, is smaller. The two numbers are not directly
+comparable, because the studies differ in the detector network and its
+assumed sensitivity, in the simulated population and its selection, and in
+the localization method (rapid \textsc{Bayestar} sky maps there, full
+parameter estimation here). In particular, the difference cannot be
+attributed simply to our use of two detectors instead of three: when we add
+Virgo, the gain from the second image becomes smaller, not larger
+(Sect.~\ref{sec:virgo_diminishing}). Section~\ref{sec:results_timedelay}
+also shows that the median factor of a population depends strongly on its
+distribution of time delays: for the pairs with more than one hour of Earth
+rotation between the images, our median is $8.3$. Both studies nonetheless
+agree on the qualitative conclusion, namely that combining two lensed images
+yields a substantial and consistent gain in sky localization. In
+Sect.~\ref{sec:virgo} we examine how this gain changes when the detector
+network itself grows.
 
-\section{Adding a third detector: Virgo}
+\section{Sky localization with the H1+L1+V1 network}
 \label{sec:virgo}
 
 The results of Sect.~\ref{sec:results_hl} isolate the gain from a coherent joint
-analysis of two lensed images within a fixed two-detector network. We now
-ask a complementary question: how much further does sky localization
-improve when a third detector, Virgo, is added to the network, and how does
-that gain depend on the geometry of the event relative to the H1-L1
-baseline and on its signal-to-noise ratio?
+analysis of two lensed images within a fixed two-detector network. We now ask a complementary question: how much further does sky localization improve when a third detector, Virgo, is added to the network, and how does that gain depend on the geometry of the event relative to the H1-L1 baseline and on its signal-to-noise ratio?
 
-\subsection{A stratified subsample, not a random one}
+\subsection{Event selection}
 \label{sec:virgo_subsample}
 
 Re-running the full 157-event population with Virgo added is
@@ -906,7 +993,7 @@ the H1+L1 (HL) analysis, and the two outcomes for each event are compared
 directly. The full per-event table is given in
 Appendix~\ref{app:virgo_table}.
 
-\subsection{Sky area: HL versus HLV}
+\subsection{Sky area with and without Virgo}
 \label{sec:virgo_area}
 
 \begin{figure}[htbp]
@@ -1001,7 +1088,7 @@ median joint 90\% credible area with each network, and $N_{<10}$ the number
 of events with a joint area below $10\,\mathrm{deg}^2$.}
 \end{table}
 
-\subsection{Low-SNR events: a sizeable factor, but areas still too large}
+\subsection{Low-SNR events}
 \label{sec:virgo_lowsnr}
 
 \begin{figure*}[htbp]
@@ -1040,7 +1127,7 @@ $\mathrm{IF}_{\rm Virgo} = 22.5$ (range $6.0$--$68.6$), and all four
 For follow-up, what matters is the final area rather than the factor by which it shrinks. None of the four \texttt{low-SNR} events reaches the $10\,\mathrm{deg}^2$ benchmark with HLV: their joint areas remain between $16$ and $83\,\mathrm{deg}^2$ (median $55\,\mathrm{deg}^2$), whereas half of the subsample, including all five \texttt{threshold} events and 7 of the 10 \texttt{geom} events, falls below it (Table~\ref{tab:virgo_groups}). For faint lensed pairs, adding Virgo still shrinks the sky area by a sizeable
 factor, but less than for louder events with similar HL areas, and the final area remains too large for efficient follow-up with wide-field telescopes.
 
-\subsection{The diminishing, but still positive, value of the lensed pair}
+\subsection{Gain from the joint analysis within the three-detector network}
 \label{sec:virgo_diminishing}
 
 A natural question is whether the gain from combining two lensed images,
@@ -1085,22 +1172,14 @@ the regime probed by the \texttt{geom} group, where the detector network
 alone is geometrically degenerate, and its marginal contribution shrinks,
 without vanishing, as the network's own triangulation power increases.
 
-\subsection{Comparison with the literature}
-\label{sec:virgo_comparison}
+The value found here for the three-detector network,
+$\mathrm{IF}_{\rm joint}^{\rm HLV} = 2.18$, is well below the
+order-of-magnitude gain reported by \citet{Hannuksela_skyloc} for the same
+network. Besides the differences listed in
+Sect.~\ref{sec:results_comparison}, our 40 events are a stratified
+subsample chosen to favor a large effect of Virgo, so this number should
+not be read as the median of a representative population.
 
-These results extend the central finding of Sect.~\ref{sec:results_comparison}
-along a second, complementary axis: while Sect.~\ref{sec:results_hl} shows that
-repeating an observation through a lensed image pair substantially improves
-localization within a fixed detector network, the present section shows
-that growing the detector network itself delivers a comparable, and in the
-most favorable cases much larger, improvement, and that the two strategies
-interact in the physically expected way, each compensating most for the
-specific geometric limitations the other leaves unaddressed.
-
-
-
-
-% Place any pending figures before the conclusions
 \FloatBarrier
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
