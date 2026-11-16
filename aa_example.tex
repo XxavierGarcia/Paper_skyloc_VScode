@@ -727,18 +727,31 @@ lies inside the 90\,\% credible region. This is the case for 129 of the 157
 maps of image~1 ($82\,\%$), 129 of those of image~2 ($82\,\%$), and 131 of
 the joint maps ($83\,\%$), whereas $141 \pm 4$ are expected for perfectly
 calibrated maps. The credible regions are therefore somewhat too small:
-a credible level of about $96\,\%$ is needed to contain $90\,\%$ of the
-injected positions. The deficit is already present in the posterior
-samples, most clearly in declination, so it is not introduced by the
-kernel density estimate. A likely contribution is that the injections are
-drawn from the astrophysical population of Sect.~\ref{sec:population}
-rather than from the priors of the analysis (Sect.~\ref{sec:pe}), since
-calibrated coverage is only guaranteed when the two coincide. Because
-the deficit is similar for the single-image and joint
+credible levels of $96\,\%$ for the single-image maps and $97\,\%$ for
+the joint maps are needed to contain $90\,\%$ of the injected positions. The deficit is already present in the posterior
+samples, so it is not introduced by the kernel density estimate. In the
+samples, the luminosity distance and the chirp mass are well calibrated,
+with the true value inside the central 90\,\% interval for 90--94\,\% of
+the runs, so a mismatch between the astrophysical population of
+Sect.~\ref{sec:population} and the priors of the analysis
+(Sect.~\ref{sec:pe}) does not appear to be the cause. The deficit is
+concentrated in the declination (76--82\,\%), where the true value falls
+outside the interval on both sides, so the posteriors are too narrow in
+declination rather than shifted. The deficit depends on how close the
+source is to a celestial pole. Dividing the sky into three declination
+bands of equal area, the 90\,\% regions contain the true position for
+90--92\,\% of the sources with $|\delta| < 19.5^\circ$ and 82--94\,\% of
+those with $19.5^\circ < |\delta| < 41.8^\circ$, but only for 65--74\,\%
+of those with $|\delta| > 41.8^\circ$. Eight of the nine pairs for which
+the true position lies outside all three maps have $|\delta| > 60^\circ$.
+Because the deficit is similar for the single-image and joint
 maps, it affects the improvement factors reported below, which are ratios
-of areas, less than the absolute areas. Computing them from the 50\,\%
-instead of the 90\,\% credible regions changes the median improvement
-factor of the joint analysis only from $5.2$ to $4.8$.
+of areas, much less than the absolute areas. When each map is evaluated
+at the credible level that contains $90\,\%$ of the injected positions,
+the areas grow by a factor of about $1.5$, but the median improvement
+factor of the joint analysis only changes from $5.2$ to $4.8$, and its
+dependence on the time delay (Sect.~\ref{sec:results_timedelay}) is
+essentially unchanged.
 
 \section{Sky localization with the H1+L1 network}
 \label{sec:results_hl}
