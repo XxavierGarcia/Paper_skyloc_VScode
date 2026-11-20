@@ -1,11 +1,35 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{37}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Abbott {et~al.}(2016)Abbott, Abbott, Abbott, Abernathy, Acernese, Ackley, {et~al.}}]{GW150914}
+Abbott, B.~P., Abbott, R., Abbott, T.~D., {et~al.} 2016, Phys. Rev. Lett., 116, 061102
+
+\bibitem[{Abbott {et~al.}(2017)Abbott, Abbott, Abbott, Acernese, Ackley, Adams, {et~al.}}]{GW170817}
+Abbott, B.~P., Abbott, R., Abbott, T.~D., {et~al.} 2017, Phys. Rev. Lett., 119, 161101
 
 \bibitem[{Abbott {et~al.}(2020)}]{Abbott2020Prospects}
 Abbott, B.~P. {et~al.} 2020, Living Reviews in Relativity, 23, 3
 
+\bibitem[{Acernese {et~al.}(2014)Acernese, Agathos, Agatsuma, Aisa, Allemandou, Allocca, {et~al.}}]{Advanced_VIRGO}
+Acernese, F., Agathos, M., Agatsuma, K., {et~al.} 2014, Classical and Quantum Gravity, 32, 024001
+
+\bibitem[{Akutsu {et~al.}(2019)Akutsu, Ando, Arai, Arai, Araki, {et~al.}}]{KAGRA}
+Akutsu, T., Ando, M., Arai, K., {et~al.} 2019, Nature Astronomy, 3, 35
+
 \bibitem[{Ashton {et~al.}(2019)Ashton, H{\"u}bner, Lasky, Talbot, Ackley, Biscoveanu, Chu, Divakarla, Easter, Goncharov, Vivanco, Harms, Lower, Meadors, Melchor, Payne, Pitkin, Powell, Sarin, Smith, \& Thrane}]{BILBY}
 Ashton, G., H{\"u}bner, M., Lasky, P.~D., {et~al.} 2019, The Astrophysical Journal Supplement Series, 241, 27
+
+\bibitem[{{Blandford} \& {Narayan}(1986)}]{morse_index}
+{Blandford}, R. \& {Narayan}, R. 1986, The Astrophysical Journal Letters, 310, 568
+
+\bibitem[{Chen {et~al.}(2025)Chen, Yu, Lu, \& Guo}]{Chen_2025}
+Chen, Z., Yu, Q., Lu, Y., \& Guo, X. 2025, The Astrophysical Journal Letters, 993, L57
+
+\bibitem[{Dai {et~al.}(2017)Dai, Venumadhav, \& Sigurdson}]{population_lensing}
+Dai, L., Venumadhav, T., \& Sigurdson, K. 2017, Phys. Rev. D, 95, 044011
+
+\bibitem[{Ezquiaga {et~al.}(2021)Ezquiaga, Holz, Hu, Lagos, \& Wald}]{Lensing_phase_effects}
+Ezquiaga, J.~M., Holz, D.~E., Hu, W., Lagos, M., \& Wald, R.~M. 2021, Phys. Rev. D, 103, 064047
 
 \bibitem[{Fairhurst(2009)}]{triangulation_GW}
 Fairhurst, S. 2009, New Journal of Physics, 11, 123006
@@ -13,14 +37,20 @@ Fairhurst, S. 2009, New Journal of Physics, 11, 123006
 \bibitem[{G\'{o}rski {et~al.}(2005)G\'{o}rski, Hivon, Banday, Wandelt, Hansen, Reinecke, \& Bartelmann}]{Gorski2005}
 G\'{o}rski, K.~M., Hivon, E., Banday, A.~J., {et~al.} 2005, ApJ, 622, 759
 
-\bibitem[{Hamilton {et~al.}(2025)Hamilton, Colleoni, Thompson, Hoy, Heffernan, Kinnear, Valencia, Vidal, Garc{\'\i}a-Quir{\'o}s, Ghosh, London, Hannam, \& Husa}]{IMRPhenomXPNR}
-Hamilton, E., Colleoni, M., Thompson, J.~E., {et~al.} 2025, arXiv e-prints, arXiv:2507.02604
+\bibitem[{Hamilton {et~al.}(2026)Hamilton, Colleoni, Thompson, Hoy, Heffernan, Kinnear, Valencia, Vidal, Garc{\'\i}a-Quir{\'o}s, Ghosh, London, Hannam, \& Husa}]{IMRPhenomXPNR}
+Hamilton, E., Colleoni, M., Thompson, J.~E., {et~al.} 2026, Phys. Rev. D, 113, 084055
 
 \bibitem[{Hannuksela {et~al.}(2020)Hannuksela, Collett, Çalışkan, \& Li}]{hubble_constant_lensing}
 Hannuksela, O.~A., Collett, T.~E., Çalışkan, M., \& Li, T. G.~F. 2020, Monthly Notices of the Royal Astronomical Society, 498, 3395
 
+\bibitem[{Haris {et~al.}(2018)Haris, Mehta, Kumar, Venumadhav, \& Ajith}]{Haris2018}
+Haris, K., Mehta, A.~K., Kumar, S., Venumadhav, T., \& Ajith, P. 2018, arXiv e-prints, arXiv:1807.07062
+
 \bibitem[{Hoy \& Raymond(2021)}]{PESummary}
 Hoy, C. \& Raymond, V. 2021, SoftwareX, 15, 100765
+
+\bibitem[{Jana {et~al.}(2025)Jana, Kapadia, Venumadhav, More, \& Ajith}]{jana2024probingnaturedarkmatter}
+Jana, S., Kapadia, S.~J., Venumadhav, T., More, S., \& Ajith, P. 2025, Phys. Rev. Lett., 135, 111402
 
 \bibitem[{Li \& Hannuksela(2026)}]{Hannuksela_skyloc}
 Li, A. K.~Y. \& Hannuksela, O.~A. 2026, arXiv e-prints, arXiv:2604.16561
@@ -34,17 +64,29 @@ Li, A. K.~Y. \& Hannuksela, O.~A. 2026, arXiv e-prints, arXiv:2604.16561
 \bibitem[{Lo \& Maga\~na Hernandez(2023)}]{PE_lensing_bayes}
 Lo, R. K.~L. \& Maga\~na Hernandez, I. 2023, Phys. Rev. D, 107, 123015
 
+\bibitem[{Narola {et~al.}(2024)Narola, Janquart, Haegel, Haris, Hannuksela, \& Van Den~Broeck}]{test_GR_lensing}
+Narola, H., Janquart, J., Haegel, L., {et~al.} 2024, Phys. Rev. D, 109, 084064
+
+\bibitem[{Ng {et~al.}(2018)Ng, Wong, Broadhurst, \& Li}]{time_delay}
+Ng, K. K.~Y., Wong, K. W.~K., Broadhurst, T., \& Li, T. G.~F. 2018, Phys. Rev. D, 97, 023012
+
+\bibitem[{Ohanian(1974)}]{GW_lensing_original}
+Ohanian, H.~C. 1974, International Journal of Theoretical Physics, 9, 425
+
 \bibitem[{Phurailatpam \& Hannuksela(2026)}]{gwsnrpythonpackageefficient}
 Phurailatpam, H. \& Hannuksela, O.~A. 2026, arXiv e-prints, arXiv:2412.09888
 
 \bibitem[{Phurailatpam {et~al.}(2026)Phurailatpam, More, Narola, Yin, Janquart, Broeck, Hannuksela, Singh, \& Keitel}]{phurailatpam2026lerlvkligovirgokagracollaboration}
-Phurailatpam, H., More, A., Narola, H., {et~al.} 2026, arXiv e-prints, arXiv:2407.07526
+Phurailatpam, H., More, A., Narola, H., {et~al.} 2026, Journal of Open Source Software, 11, 7420
 
 \bibitem[{Pratten {et~al.}(2021)Pratten, Garc\'{\i}a-Quir\'os, Colleoni, Ramos-Buades, Estell\'es, Mateu-Lucena, Jaume, Haney, Keitel, Thompson, \& Husa}]{IMRPhenomXPHM}
 Pratten, G., Garc\'{\i}a-Quir\'os, C., Colleoni, M., {et~al.} 2021, Phys. Rev. D, 103, 104056
 
 \bibitem[{Romero-Shaw {et~al.}(2020)}]{bilby_pipe_paper}
 Romero-Shaw, I.~M. {et~al.} 2020, Mon. Not. Roy. Astron. Soc., 499, 3295
+
+\bibitem[{Schutz(1986)}]{Schutz1986}
+Schutz, B.~F. 1986, Nature, 323, 310
 
 \bibitem[{Singer \& Price(2016)}]{SingerPrice2016}
 Singer, L.~P. \& Price, L.~R. 2016, Phys. Rev. D, 93, 024013
@@ -55,7 +97,19 @@ Speagle, J.~S. 2020, Monthly Notices of the Royal Astronomical Society, 493, 313
 \bibitem[{Tessore \& Metcalf(2015)}]{Tessore2015}
 Tessore, N. \& Metcalf, R.~B. 2015, Astronomy \& Astrophysics, 580, A79
 
-\bibitem[{{The LIGO Scientific Collaboration} {et~al.}(2026){The LIGO Scientific Collaboration}, {the Virgo Collaboration}, {the KAGRA Collaboration}, Abac, Abe, Abouelfettouh, {et~al.}}]{GWTC5}
-{The LIGO Scientific Collaboration}, {the Virgo Collaboration}, {the KAGRA Collaboration}, {et~al.} 2026, arXiv e-prints, arXiv:2605.27223
+\bibitem[{{The LIGO Scientific Collaboration} {et~al.}(2015){The LIGO Scientific Collaboration}, Aasi, Abbott, Abbott, Abbott, Abernathy, {et~al.}}]{Advanced_ligo}
+{The LIGO Scientific Collaboration}, Aasi, J., Abbott, B.~P., {et~al.} 2015, Classical and Quantum Gravity, 32, 074001
+
+\bibitem[{{The LIGO Scientific Collaboration} {et~al.}(2026{\natexlab{a}}){The LIGO Scientific Collaboration}, {the Virgo Collaboration}, {the KAGRA Collaboration}, Abac, Abe, Abouelfettouh, {et~al.}}]{GWTC5}
+{The LIGO Scientific Collaboration}, {the Virgo Collaboration}, {the KAGRA Collaboration}, {et~al.} 2026{\natexlab{a}}, arXiv e-prints, arXiv:2605.27223
+
+\bibitem[{{The LIGO Scientific Collaboration} {et~al.}(2026{\natexlab{b}}){The LIGO Scientific Collaboration}, {the Virgo Collaboration}, {the KAGRA Collaboration}, Abac, Abe, Abouelfettouh, {et~al.}}]{GWTC5_observations}
+{The LIGO Scientific Collaboration}, {the Virgo Collaboration}, {the KAGRA Collaboration}, {et~al.} 2026{\natexlab{b}}, arXiv e-prints, arXiv:2605.27225
+
+\bibitem[{{The LIGO Scientific Collaboration} {et~al.}(2025){The LIGO Scientific Collaboration}, {the Virgo Collaboration}, {the KAGRA Collaboration}, Abac, Abouelfettouh, Acernese, {et~al.}}]{GWTC4_introduction}
+{The LIGO Scientific Collaboration}, {the Virgo Collaboration}, {the KAGRA Collaboration}, {et~al.} 2025, The Astrophysical Journal Letters, 995, L18
+
+\bibitem[{{The LIGO Scientific Collaboration} {et~al.}(2026{\natexlab{c}}){The LIGO Scientific Collaboration}, {the Virgo Collaboration}, {the KAGRA Collaboration}, Abac, Abouelfettouh, Acernese, {et~al.}}]{theligoscientificcollaboration2026gwtc40searchesgravitationalwavelensing}
+{The LIGO Scientific Collaboration}, {the Virgo Collaboration}, {the KAGRA Collaboration}, {et~al.} 2026{\natexlab{c}}, The Astrophysical Journal, 1011, 240
 
 \end{thebibliography}

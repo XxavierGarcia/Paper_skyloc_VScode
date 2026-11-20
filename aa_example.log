@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.20)  16 NOV 2026 18:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.20)  20 NOV 2026 10:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -713,210 +713,263 @@ Package hyperref Info: Link coloring ON on input line 51.
 \@outlinefile=\write3
 \openout3 = `aa_example.out'.
 
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 107.
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
+
+
+
+IMPORTANT
+
+Class aa Warning: Around 329 words in the abstract instead of 300 (max). You should rewrite your abstract on input line 125.
+
+IMPORTANT 
+
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 132.
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 107.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 107.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 107.
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 107.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 107.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for T1+txss on input line 107.
+LaTeX Font Info:    Trying to load font information for T1+txss on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txss.fd
 File: t1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 16.41594pt on input line 107.
+(Font)              scaled to size 16.41594pt on input line 132.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <17.28> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 107.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 132.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 16.41594pt on input line 107.
+(Font)              scaled to size 16.41594pt on input line 132.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <12> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 107.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 132.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 11.39996pt on input line 107.
+(Font)              scaled to size 11.39996pt on input line 132.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 107.
+(Font)              scaled to size 8.54997pt on input line 132.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <9> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 107.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 132.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 8.54997pt on input line 107.
+(Font)              scaled to size 8.54997pt on input line 132.
 LaTeX Font Info:    Font shape `T1/txss/m/it' in size <9> not available
-(Font)              Font shape `T1/txss/m/sl' tried instead on input line 107.
+(Font)              Font shape `T1/txss/m/sl' tried instead on input line 132.
 LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
-(Font)              scaled to size 8.54997pt on input line 107.
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 107.
+(Font)              scaled to size 8.54997pt on input line 132.
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 111.
+(Font)              scaled to size 10.40245pt on input line 136.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <10.95> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 111.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 136.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 10.40245pt on input line 111.
+(Font)              scaled to size 10.40245pt on input line 136.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 111.
-LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 635.
-LaTeX Font Info:    Font shape `T1/txss/m/it' in size <10> not available
-(Font)              Font shape `T1/txss/m/sl' tried instead on input line 635.
-LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 635.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
+(Font)              scaled to size 6.64998pt on input line 136.
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--156
+\T1/txr/m/n/10 Since the first de-tec-tion of grav-i-ta-tional waves
+ []
+
+
+Underfull \hbox (badness 6332) in paragraph at lines 139--156
+\T1/txr/m/n/10 (GWs) from a bi-nary black hole merger ([][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--156
+[][]\T1/txr/m/n/10 2016[][]), the net-work formed by the Ad-vanced LIGO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--156
+\T1/txr/m/n/10 ([][][][][] [][]2015[][]), Ad-vanced
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--156
+\T1/txr/m/n/10 merger can-di-dates ([][][][][]
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-Underfull \hbox (badness 1571) in paragraph at lines 718--724
+LaTeX Font Info:    Font shape `T1/txss/m/n' will be
+(Font)              scaled to size 9.49997pt on input line 734.
+LaTeX Font Info:    Font shape `T1/txss/m/it' in size <10> not available
+(Font)              Font shape `T1/txss/m/sl' tried instead on input line 734.
+LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
+(Font)              scaled to size 9.49997pt on input line 734.
+
+Underfull \hbox (badness 1571) in paragraph at lines 816--822
 \T1/txr/m/n/10 where $\OML/txmi/m/it/10 p\OT1/txr/m/n/10 (\OML/txmi/m/it/10 ; ^^N \OMS/txsy/m/n/10 j \OML/txmi/m/it/10 d\OT1/txr/m/n/10 )$ \T1/txr/m/n/10 is the pos-te-rior marginal-ized over all
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 718--724
+Underfull \hbox (badness 1648) in paragraph at lines 816--822
 \T1/txr/m/n/10 ric we use the frac-tion of pos-te-rior prob-a-bil-ity con-tained
  []
 
 
-Underfull \hbox (badness 2189) in paragraph at lines 718--724
+Underfull \hbox (badness 2189) in paragraph at lines 816--822
 \T1/txr/m/n/10 in the sin-gle most prob-a-ble con-stel-la-tion, com-puted with
  []
 
-<Figures/inj002_skyloc_img1.png, id=171, 578.16pt x 433.62pt>
+[2]
+<Figures/inj002_skyloc_img1.png, id=265, 578.16pt x 433.62pt>
 File: Figures/inj002_skyloc_img1.png Graphic file (type png)
 <use Figures/inj002_skyloc_img1.png>
-Package pdftex.def Info: Figures/inj002_skyloc_img1.png  used on input line 795.
+Package pdftex.def Info: Figures/inj002_skyloc_img1.png  used on input line 897.
 (pdftex.def)             Requested size: 167.53365pt x 86.0222pt.
-<Figures/inj002_skyloc_img2.png, id=174, 578.16pt x 433.62pt>
+<Figures/inj002_skyloc_img2.png, id=268, 578.16pt x 433.62pt>
 File: Figures/inj002_skyloc_img2.png Graphic file (type png)
 <use Figures/inj002_skyloc_img2.png>
-Package pdftex.def Info: Figures/inj002_skyloc_img2.png  used on input line 797.
+Package pdftex.def Info: Figures/inj002_skyloc_img2.png  used on input line 899.
 (pdftex.def)             Requested size: 167.53365pt x 86.0222pt.
-<Figures/inj002_skyloc_joint.png, id=176, 578.16pt x 433.62pt>
+<Figures/inj002_skyloc_joint.png, id=270, 578.16pt x 433.62pt>
 File: Figures/inj002_skyloc_joint.png Graphic file (type png)
 <use Figures/inj002_skyloc_joint.png>
-Package pdftex.def Info: Figures/inj002_skyloc_joint.png  used on input line 799.
+Package pdftex.def Info: Figures/inj002_skyloc_joint.png  used on input line 901.
 (pdftex.def)             Requested size: 167.53365pt x 86.0222pt.
-<Figures/cdf_90_area.png, id=178, 477.9456pt x 333.4056pt>
+<Figures/cdf_90_area.png, id=272, 477.9456pt x 333.4056pt>
 File: Figures/cdf_90_area.png Graphic file (type png)
 <use Figures/cdf_90_area.png>
-Package pdftex.def Info: Figures/cdf_90_area.png  used on input line 810.
+Package pdftex.def Info: Figures/cdf_90_area.png  used on input line 912.
 (pdftex.def)             Requested size: 256.53291pt x 178.95273pt.
-<Figures/pdf_90_area.png, id=179, 477.9456pt x 333.4056pt>
+<Figures/pdf_90_area.png, id=273, 477.9456pt x 333.4056pt>
 File: Figures/pdf_90_area.png Graphic file (type png)
 <use Figures/pdf_90_area.png>
-Package pdftex.def Info: Figures/pdf_90_area.png  used on input line 812.
+Package pdftex.def Info: Figures/pdf_90_area.png  used on input line 914.
 (pdftex.def)             Requested size: 256.53291pt x 178.95273pt.
-[2]
-<Figures/if_joint_vs_earth_rotation.png, id=200, 505.89pt x 361.35pt>
+<Figures/if_joint_vs_earth_rotation.png, id=278, 505.89pt x 361.35pt>
 File: Figures/if_joint_vs_earth_rotation.png Graphic file (type png)
 <use Figures/if_joint_vs_earth_rotation.png>
-Package pdftex.def Info: Figures/if_joint_vs_earth_rotation.png  used on input line 856.
+Package pdftex.def Info: Figures/if_joint_vs_earth_rotation.png  used on input line 957.
 (pdftex.def)             Requested size: 256.0748pt x 182.91313pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<Figures/sky_area_vs_snr_hl.png, id=203, 875.4306pt x 333.4056pt>
+<Figures/sky_area_vs_snr_hl.png, id=281, 875.4306pt x 333.4056pt>
 File: Figures/sky_area_vs_snr_hl.png Graphic file (type png)
 <use Figures/sky_area_vs_snr_hl.png>
-Package pdftex.def Info: Figures/sky_area_vs_snr_hl.png  used on input line 881.
+Package pdftex.def Info: Figures/sky_area_vs_snr_hl.png  used on input line 982.
 (pdftex.def)             Requested size: 261.76535pt x 189.77353pt.
 File: Figures/sky_area_vs_snr_hl.png Graphic file (type png)
 <use Figures/sky_area_vs_snr_hl.png>
-Package pdftex.def Info: Figures/sky_area_vs_snr_hl.png  used on input line 883.
+Package pdftex.def Info: Figures/sky_area_vs_snr_hl.png  used on input line 984.
 (pdftex.def)             Requested size: 236.6337pt x 189.85492pt.
-<Figures/constellation_vs_SNR_GWTC5.png, id=212, 477.9456pt x 333.4056pt>
+
+Underfull \hbox (badness 7238) in paragraph at lines 1001--1011
+[]\T1/txr/m/n/10 Comparing against the pub-lished sky maps of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1001--1011
+\T1/txr/m/n/10 104 GWTC-5 can-di-dates with a false-alarm rate be-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1001--1011
+\T1/txr/m/n/10 low $\OT1/txr/m/n/10 1 [][]$\T1/txr/m/n/10 , for which source prop-er-ties are re-ported
+ []
+
+
+Underfull \hbox (badness 7047) in paragraph at lines 1001--1011
+\T1/txr/m/n/10 ([][][][][] [][]2026a[][],[][]b[][]), we find
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 1001--1011
+\T1/txr/m/n/10 that the joint lensed-pair anal-y-sis with only two de-tec-tors
+ []
+
+<Figures/constellation_vs_SNR_GWTC5.png, id=291, 477.9456pt x 333.4056pt>
 File: Figures/constellation_vs_SNR_GWTC5.png Graphic file (type png)
 <use Figures/constellation_vs_SNR_GWTC5.png>
-Package pdftex.def Info: Figures/constellation_vs_SNR_GWTC5.png  used on input line 912.
+Package pdftex.def Info: Figures/constellation_vs_SNR_GWTC5.png  used on input line 1014.
 (pdftex.def)             Requested size: 256.0748pt x 178.63222pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./Figures/cdf_90_area.png> <./Figures/pdf_90_area.png> <./Figures/if_joint_vs_earth_rotation.png> <./Figures/inj002_skyloc_img1.png> <./Figures/inj002_skyloc_img2.png> <./Figures/inj002_skyloc_joint.png>]
-Underfull \hbox (badness 1931) in paragraph at lines 923--946
+Underfull \hbox (badness 1931) in paragraph at lines 1025--1048
 \T1/txr/m/n/10 events ob-served by the full LIGO/Virgo/KAGRA net-work
  []
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 923--946
+Underfull \hbox (badness 1275) in paragraph at lines 1025--1048
 [][]\T1/txr/m/n/10 2016[][]) sky maps on a sim-u-lated pop-u-la-tion ob-served with
  []
 
-[4 <./Figures/constellation_vs_SNR_GWTC5.png> <./Figures/sky_area_vs_snr_hl.png>]
-<Figures/hl_vs_hlv_snr.png, id=253, 867.24pt x 433.62pt>
+[3] [4 <./Figures/cdf_90_area.png> <./Figures/pdf_90_area.png> <./Figures/if_joint_vs_earth_rotation.png> <./Figures/inj002_skyloc_img1.png> <./Figures/inj002_skyloc_img2.png> <./Figures/inj002_skyloc_joint.png>]
+Underfull \vbox (badness 1019) has occurred while \output is active []
+
+<Figures/hl_vs_hlv_snr.png, id=331, 867.24pt x 433.62pt>
 File: Figures/hl_vs_hlv_snr.png Graphic file (type png)
 <use Figures/hl_vs_hlv_snr.png>
-Package pdftex.def Info: Figures/hl_vs_hlv_snr.png  used on input line 986.
+Package pdftex.def Info: Figures/hl_vs_hlv_snr.png  used on input line 1088.
 (pdftex.def)             Requested size: 235.5872pt x 232.79492pt.
 File: Figures/hl_vs_hlv_snr.png Graphic file (type png)
 <use Figures/hl_vs_hlv_snr.png>
-Package pdftex.def Info: Figures/hl_vs_hlv_snr.png  used on input line 988.
+Package pdftex.def Info: Figures/hl_vs_hlv_snr.png  used on input line 1090.
 (pdftex.def)             Requested size: 229.9873pt x 232.7817pt.
 
-Underfull \hbox (badness 1817) in paragraph at lines 998--1008
+Underfull \hbox (badness 1817) in paragraph at lines 1100--1110
 \T1/txr/m/n/10 net-work, us-ing the Virgo O5 low-sensitivity de-sign curve
  []
 
-<Figures/hl_vs_hlv_area90_scatter.png, id=260, 469.755pt x 397.485pt>
+<Figures/hl_vs_hlv_area90_scatter.png, id=338, 469.755pt x 397.485pt>
 File: Figures/hl_vs_hlv_area90_scatter.png Graphic file (type png)
 <use Figures/hl_vs_hlv_area90_scatter.png>
-Package pdftex.def Info: Figures/hl_vs_hlv_area90_scatter.png  used on input line 1014.
+Package pdftex.def Info: Figures/hl_vs_hlv_area90_scatter.png  used on input line 1116.
 (pdftex.def)             Requested size: 256.0748pt x 216.67657pt.
-<Figures/hl_vs_hlv_area90_slopechart.png, id=261, 433.62pt x 794.97pt>
+<Figures/hl_vs_hlv_area90_slopechart.png, id=339, 433.62pt x 794.97pt>
 File: Figures/hl_vs_hlv_area90_slopechart.png Graphic file (type png)
 <use Figures/hl_vs_hlv_area90_slopechart.png>
-Package pdftex.def Info: Figures/hl_vs_hlv_area90_slopechart.png  used on input line 1024.
+Package pdftex.def Info: Figures/hl_vs_hlv_area90_slopechart.png  used on input line 1126.
 (pdftex.def)             Requested size: 217.66513pt x 399.06096pt.
-<Figures/hl_vs_hlv_if_by_group.png, id=262, 542.025pt x 361.35pt>
+<Figures/hl_vs_hlv_if_by_group.png, id=340, 542.025pt x 361.35pt>
 File: Figures/hl_vs_hlv_if_by_group.png Graphic file (type png)
 <use Figures/hl_vs_hlv_if_by_group.png>
-Package pdftex.def Info: Figures/hl_vs_hlv_if_by_group.png  used on input line 1033.
+Package pdftex.def Info: Figures/hl_vs_hlv_if_by_group.png  used on input line 1135.
 (pdftex.def)             Requested size: 256.0748pt x 170.72223pt.
 
-Underfull \hbox (badness 1412) in paragraph at lines 1038--1038
+Underfull \hbox (badness 1412) in paragraph at lines 1140--1140
 []\T1/txr/m/n/10 Fig. 9: |Im-prove-ment fac-tor from adding Virgo, $[][] \OT1/txr/m/n/10 =
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 1038--1038
+Underfull \hbox (badness 1331) in paragraph at lines 1140--1140
 \OML/txmi/m/it/10 A[]=A[]$\T1/txr/m/n/10 , for each event of the Virgo sub-sam-ple,
  []
 
+[5 <./Figures/constellation_vs_SNR_GWTC5.png> <./Figures/sky_area_vs_snr_hl.png>]
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <9> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 1101.
-<Figures/img1_vs_img2_joint_colored.png, id=268, 738.88847pt x 347.18507pt>
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 1203.
+<Figures/img1_vs_img2_joint_colored.png, id=362, 738.88847pt x 347.18507pt>
 File: Figures/img1_vs_img2_joint_colored.png Graphic file (type png)
 <use Figures/img1_vs_img2_joint_colored.png>
-Package pdftex.def Info: Figures/img1_vs_img2_joint_colored.png  used on input line 1109.
+Package pdftex.def Info: Figures/img1_vs_img2_joint_colored.png  used on input line 1211.
 (pdftex.def)             Requested size: 523.5307pt x 245.99455pt.
-[5] [6 <./Figures/hl_vs_hlv_area90_scatter.png> <./Figures/hl_vs_hlv_snr.png>] [7 <./Figures/hl_vs_hlv_area90_slopechart.png> <./Figures/hl_vs_hlv_if_by_group.png>] (./aa_example.bbl
-Underfull \hbox (badness 4569) in paragraph at lines 41--42
-[]\T1/txr/m/n/8 Phurailatpam, H., More, A., Narola, H., et al. 2026, arXiv e-prints,
- []
 
-) [8
+Underfull \vbox (badness 3792) has occurred while \output is active []
 
- <./Figures/img1_vs_img2_joint_colored.png>] [9
+ [6 <./Figures/hl_vs_hlv_area90_scatter.png> <./Figures/hl_vs_hlv_snr.png>] [7 <./Figures/hl_vs_hlv_area90_slopechart.png> <./Figures/hl_vs_hlv_if_by_group.png>] (./aa_example.bbl) [8 <./Figures/img1_vs_img2_joint_colored.png>] [9
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1405--1412
+Underfull \hbox (badness 10000) in paragraph at lines 1508--1515
 
  []
 
@@ -927,18 +980,18 @@ Package epstopdf Info: Source file: <figure.eps>
 (epstopdf)                    date: 2026-09-04 11:07:03
 (epstopdf)                    size: 3222 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure-eps-converted-to.pdf figure.eps>
-(epstopdf)             \includegraphics on input line 1423.
+(epstopdf)             \includegraphics on input line 1526.
 Package epstopdf Info: Output file is already uptodate.
-<figure-eps-converted-to.pdf, id=321, 57.21375pt x 55.20625pt>
+<figure-eps-converted-to.pdf, id=405, 57.21375pt x 55.20625pt>
 File: figure-eps-converted-to.pdf Graphic file (type pdf)
 <use figure-eps-converted-to.pdf>
-Package pdftex.def Info: figure-eps-converted-to.pdf  used on input line 1423.
+Package pdftex.def Info: figure-eps-converted-to.pdf  used on input line 1526.
 (pdftex.def)             Requested size: 57.2136pt x 55.2061pt.
 [10
 
 
  <./figure-eps-converted-to.pdf>]
-Package hyperref Info: bookmark level for unknown obj defaults to 0 on input line 1503.
+Package hyperref Info: bookmark level for unknown obj defaults to 0 on input line 1606.
  [11] [12
 
 
@@ -959,18 +1012,18 @@ Package rerunfilecheck Info: File `aa_example.out' has not changed.
 (rerunfilecheck)             Checksum: B386FE371CAC54620D13533085922155;5172.
  ) 
 Here is how much of TeX's memory you used:
- 17051 strings out of 467356
- 273099 string characters out of 5418690
- 815883 words of memory out of 6000000
- 45731 multiletter control sequences out of 15000+600000
+ 17128 strings out of 467356
+ 274905 string characters out of 5418690
+ 817692 words of memory out of 6000000
+ 45790 multiletter control sequences out of 15000+600000
  736829 words of font info for 216 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,14n,93p,670b,918s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,14n,93p,670b,922s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on aa_example.pdf (16 pages, 1446354 bytes).
+Output written on aa_example.pdf (16 pages, 1454688 bytes).
 PDF statistics:
- 451 PDF objects out of 1000 (max. 8388607)
- 363 compressed objects within 4 object streams
- 83 named destinations out of 1000 (max. 500000)
+ 538 PDF objects out of 1000 (max. 8388607)
+ 449 compressed objects within 5 object streams
+ 101 named destinations out of 1000 (max. 500000)
  305 words of extra memory for PDF output out of 10000 (max. 10000000)
 

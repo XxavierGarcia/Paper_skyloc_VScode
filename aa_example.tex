@@ -85,19 +85,44 @@
 % 5 {} token are mandatory
  
   \abstract
-  % context heading (optional)
-  % {} leave it empty if necessary  
-   {Optional, leave empty if necessary.  The heading “Context” is used when needed to
-give background information on the research conducted in the paper}
-  % aims heading (mandatory)
-   {Mandatory. The objectives of the paper are defined here.} 
-  % methods heading (mandatory)
-   {Mandatory. The methods of the investigation are outlined here}
-  % results heading (mandatory)
-   {Mandatory. The results are summarized here.}
-  % conclusions heading (optional), leave it empty if necessary
-   {Optional, leave empty if necessary.  “Conclusions” can be used to
-explicit the general conclusions that can be drawn from the paper.}
+  % context
+   {Strongly lensed gravitational waves reach the detectors as repeated
+   copies of the same signal, separated by minutes to months. Because the
+   Earth rotates between the arrivals, each image is observed with a
+   different orientation of the detector network, which can improve the
+   sky localization of the source.}
+  % aims
+   {We quantify how much the joint analysis of two lensed images improves
+   the sky localization of binary black hole mergers, identify what sets
+   this gain, and determine how it changes when Virgo is added to the two
+   LIGO detectors.}
+  % methods
+   {We simulate 157 strongly lensed binary black hole pairs detectable by
+   the LIGO Hanford and Livingston detectors at the projected O5a
+   sensitivity, and analyze each pair with full Bayesian parameter
+   estimation, both image by image and jointly under the lensed
+   hypothesis. For a stratified subsample of 40 pairs, we repeat the
+   analysis with Virgo.}
+  % results
+   {With the two LIGO detectors, the joint analysis reduces the 90\%
+   credible sky area of every pair, and the median area from
+   $563\,\mathrm{deg}^2$ for the best single image to $91\,\mathrm{deg}^2$,
+   a median improvement by a factor of $5.2$. The gain is set by the
+   rotation of the Earth between the two arrivals rather than by the time
+   delay itself: pairs for which the orientation of the network differs by
+   more than $15^\circ$ between the two images improve by a median factor
+   of $8.3$, against $2.1$ for the rest. Six pairs ($3.8\%$) reach areas
+   below $10\,\mathrm{deg}^2$. In the Virgo subsample, adding Virgo reduces
+   the joint areas by a median factor of $11.5$ and brings half of the
+   pairs below $10\,\mathrm{deg}^2$, while the gain from the second image
+   within the three-detector network drops from a median factor of $4.7$
+   to $2.2$.}
+  % conclusions
+   {The joint analysis of lensed image pairs substantially improves the
+   localization of two-detector observations, and most when the two images
+   are observed with clearly different network orientations. With three
+   detectors the second image still helps, but less, because Virgo and the
+   second image largely provide the same geometric information.}
 
    \keywords{gravitational waves -- strong gravitational lensing -- parameter estimation -- sky localization --
 binary black holes -- LIGO
@@ -109,7 +134,81 @@ binary black holes -- LIGO
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-\lipsum[1]
+\label{sec:intro}
+
+Since the first detection of gravitational waves (GWs) from a binary black
+hole merger \citep{GW150914}, the network formed by the Advanced LIGO
+\citep{Advanced_ligo}, Advanced Virgo \citep{Advanced_VIRGO}, and KAGRA
+\citep{KAGRA} detectors has observed more than three hundred compact binary
+merger candidates \citep{GWTC4_introduction,GWTC5}. For many science goals
+the position of the source on the sky matters as much as its intrinsic
+parameters: it decides whether electromagnetic counterparts can be searched
+for, as for the binary neutron star merger GW170817 \citep{GW170817}, and
+whether a host galaxy can be identified. GW detectors locate a source mainly
+by triangulation, through the differences in arrival time between detectors,
+complemented by the antenna pattern functions and the measured amplitudes
+\citep{triangulation_GW}. The precision therefore depends strongly on the
+number of detectors. With the two LIGO detectors alone, a single event is
+typically localized to hundreds of square degrees (in this work, a median
+of about $560\,\mathrm{deg}^2$; Sect.~\ref{sec:results_area90}), far more
+than the $10\,\mathrm{deg}^2$ commonly adopted as a benchmark for follow-up
+with wide-field survey telescopes \citep{Abbott2020Prospects}.
+
+Like light, GWs can be deflected by massive objects along the line of
+sight \citep{GW_lensing_original}. When the lens is a galaxy, strong lensing
+produces several images of the same merger, which reach the detectors as
+repeated signals with the same intrinsic parameters but different
+amplitudes, arrival times, and phases \citep{Lensing_phase_effects}. The
+phase shift is set by the image type, or Morse index \citep{morse_index},
+and the time delays between images range from minutes to months
+\citep{time_delay}. No lensed GW signal has been confirmed so far
+\citep{theligoscientificcollaboration2026gwtc40searchesgravitationalwavelensing},
+but more than one strongly lensed event per year is expected at design
+sensitivity \citep{time_delay}. Such detections would allow measurements of
+the Hubble constant from lensing time delays combined with GW distances
+\citep{Schutz1986,hubble_constant_lensing}, probes of the nature of dark
+matter \citep{jana2024probingnaturedarkmatter}, and tests of GW propagation
+\citep{test_GR_lensing}. Identifying lensed events is also needed to avoid
+biases in population studies, since a magnified image appears closer and
+more massive than it is \citep{population_lensing}.
+
+Strong lensing can also improve the sky localization itself. The images of
+a lensed pair are repeated observations of the same source, and they can be
+combined \citep{hubble_constant_lensing,Chen_2025}. Because the Earth
+rotates between the arrivals, each image is observed with a different
+orientation of the detector network, so the two images constrain the sky
+position in different ways \citep{Hannuksela_skyloc}.
+\citet{hubble_constant_lensing} showed that quadruply lensed events observed
+by the full LIGO/Virgo/KAGRA network can, combined with electromagnetic
+observations of the lens galaxy, be localized to one or a few candidate
+host galaxies, and \citet{Chen_2025} showed that the improved localization
+of lensed events without electromagnetic counterparts can enable host
+galaxy identification and precise cosmological inference.
+\citet{Hannuksela_skyloc} performed the first systematic study of this
+repeated-signal localization, using rapid \textsc{Bayestar} sky maps
+\citep{SingerPrice2016} for a simulated population observed by the LIGO and
+Virgo detectors. Lensed pairs can be identified through the overlap of their
+single-image posteriors \citep{Haris2018}, and analyzed jointly within a
+Bayesian framework that assumes shared source parameters
+\citep{PE_lensing_bayes}.
+
+In this work we quantify the localization gain from the joint parameter
+estimation of two lensed images for a realistic population, and identify
+what sets it. We simulate 157 strongly lensed binary black hole pairs
+detectable by the two LIGO detectors at the projected O5a sensitivity
+\citep{O5PSD}, and analyze every image both on its own and jointly with its
+counterpart, using full Bayesian parameter estimation rather than rapid
+sky maps. We focus on the two-detector network, in which the localization
+of a single image is poorest, and we test directly the expected dependence
+of the gain on the Earth rotation between the two images. For a stratified
+subsample of 40 pairs we then add Virgo, to determine how much the second
+image still contributes once a third detector is available.
+
+The paper is organized as follows. Section~\ref{sec:methods} describes the
+simulated population, the parameter estimation, and the sky maps.
+Section~\ref{sec:results_hl} presents the results for the H1+L1 network,
+and Sect.~\ref{sec:virgo} those obtained when Virgo is added. We summarize
+our conclusions in Sect.~\ref{sec:conclusions}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ---------------------------------------------------------------
 % A&A template examples (citations, maths, figures, tables), hidden
@@ -649,8 +748,7 @@ reach the detectors at different times, separated by minutes to months for
 galaxy-scale lenses. The Earth rotates in between, so each image is seen
 with a different orientation of the detector network, and hence with a
 different ring and a different antenna pattern
-\citep{Hannuksela_skyloc,hubble_constant_lensing}. Requiring the two images
-to share one sky position keeps only the region where the two constraints
+\citep{Hannuksela_skyloc,hubble_constant_lensing}. Requiring the two images to share one sky position keeps only the region where the two constraints
 overlap. We test this mechanism directly in
 Sect.~\ref{sec:results_timedelay}.
 
@@ -742,8 +840,12 @@ source is to a celestial pole. Dividing the sky into three declination
 bands of equal area, the 90\,\% regions contain the true position for
 90--92\,\% of the sources with $|\delta| < 19.5^\circ$ and 82--94\,\% of
 those with $19.5^\circ < |\delta| < 41.8^\circ$, but only for 65--74\,\%
-of those with $|\delta| > 41.8^\circ$. Eight of the nine pairs for which
+of those with $|\delta| > 41.8^\circ$. Seven of the nine pairs for which
 the true position lies outside all three maps have $|\delta| > 60^\circ$.
+For one of them ($\delta = +76^\circ$), repeating the single-image
+analysis on the same data with 3000 instead of 1000 live points and longer
+random walks still leaves the true position outside the 90\,\% credible
+region.
 Because the deficit is similar for the single-image and joint
 maps, it affects the improvement factors reported below, which are ratios
 of areas, much less than the absolute areas. When each map is evaluated
@@ -830,12 +932,11 @@ from the nearest whole number of sidereal days; one hour corresponds to a
 rotation of $15^\circ$.
 
 Figure~\ref{fig:if_vs_rotation} shows $\mathrm{IF}_{\rm joint}$ against
-this quantity for the 157 pairs. The two are strongly correlated (Spearman
-rank coefficient $0.69$). The 60 pairs with less than one hour of rotation
+this quantity for the 157 pairs. The two are strongly correlated. The 60 pairs with less than one hour of rotation
 have a median $\mathrm{IF}_{\rm joint} = 2.1$, against $8.3$ for the
 remaining 97 pairs. All 36 pairs with $\mathrm{IF}_{\rm joint} > 10$ have
 more than one hour of rotation, and 24 of the 25 pairs with
-$\mathrm{IF}_{\rm joint} < 2$ have less. The gain rises steeply between
+$\mathrm{IF}_{\rm joint} < 2$ have less. The gain increases rapidly between
 about $0.3$ and $3$ hours and then flattens: once the network has turned by
 a few tens of degrees, further rotation brings no additional improvement on
 average.
@@ -897,8 +998,9 @@ fraction in the top constellation is $41.75\,\%$ (best of the two images).
 The joint analysis raises the median to $69.3\,\%$, with $121/157$ events
 ($77.1\,\%$) above $50\,\%$ and $49/157$ events ($31.2\,\%$) above $90\,\%$.
 
-Comparing against the published sky maps of 104 GWTC-5 events
-\citep{GWTC5}, we find that the joint lensed-pair analysis with only
+Comparing against the published sky maps of the 104 GWTC-5 candidates
+with a false-alarm rate below $1\,\mathrm{yr}^{-1}$, for which source
+properties are reported \citep{GWTC5,GWTC5_observations}, we find that the joint lensed-pair analysis with only
 two detectors reaches constellation fractions comparable to those achieved
 by the three-detector HLV network on real data, whereas real HL-only events
 are confined below $\sim 50\,\%$ (Fig.~\ref{fig:constellation_gwtc5}). This
@@ -1044,7 +1146,7 @@ HLV against the same quantity with HL, for all 40 events. Every event falls
 below the diagonal: adding Virgo improves the localization of every event
 in the subsample, with no exceptions. The per-event improvement factor,
 $\mathrm{IF}_{\rm Virgo} \equiv A_{90}^{\rm joint,\,HL}/A_{90}^{\rm joint,\,HLV}$,
-has a median of $11.5$ across the subsample (range $2.4$--$93.8$), and the
+has a median of $11.5$ across the subsample (range $2.4$-$93.8$), and the
 median joint area drops from $109.0\,\mathrm{deg}^2$ (HL) to
 $10.0\,\mathrm{deg}^2$ (HLV). Twenty of the 40 events ($50\,\%$) fall below
 the $10\,\mathrm{deg}^2$ benchmark with Virgo, compared to a single event
@@ -1132,9 +1234,9 @@ The two groups therefore cannot be compared directly.
 Comparing events at similar HL area instead reveals the expected effect of
 a low SNR (Fig.~\ref{fig:hl_vs_hlv_scatter}). The 12 \texttt{core} and
 \texttt{geom} events whose HL areas fall in the same range as the
-\texttt{low-SNR} group ($170$--$601\,\mathrm{deg}^2$) have a median
-$\mathrm{IF}_{\rm Virgo} = 22.5$ (range $6.0$--$68.6$), and all four
-\texttt{low-SNR} events ($3.6$--$10.4$) lie below 11 of these 12. Since the
+\texttt{low-SNR} group ($170$-$601\,\mathrm{deg}^2$) have a median
+$\mathrm{IF}_{\rm Virgo} = 22.5$ (range $6.0$-$68.6$), and all four
+\texttt{low-SNR} events ($3.6$-$10.4$) lie below 11 of these 12. Since the
 \texttt{low-SNR} group contains only four events, and the comparison range is set by those same events, we read this as a clear trend rather than a precise measurement.
 
 For follow-up, what matters is the final area rather than the factor by which it shrinks. None of the four \texttt{low-SNR} events reaches the $10\,\mathrm{deg}^2$ benchmark with HLV: their joint areas remain between $16$ and $83\,\mathrm{deg}^2$ (median $55\,\mathrm{deg}^2$), whereas half of the subsample, including all five \texttt{threshold} events and 7 of the 10 \texttt{geom} events, falls below it (Table~\ref{tab:virgo_groups}). For faint lensed pairs, adding Virgo still shrinks the sky area by a sizeable
@@ -1197,6 +1299,7 @@ not be read as the median of a representative population.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
+\label{sec:conclusions}
 Lorem ipsum dolor sit amet,
 consectetuer adipiscing elit. In hac habitasse platea dictumst. In-
 teger tempus convallis augue. Etiam facilisis.

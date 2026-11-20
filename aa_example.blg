@@ -4,44 +4,44 @@ The top-level auxiliary file: aa_example.aux
 The style file: Bibtex/aa.bst
 Database file #1: references.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 19 entries,
+You've used 37 entries,
             3039 wiz_defined-function locations,
-            797 strings with 9330 characters,
-and the built_in function-call counts, 10870 in all, are:
-= -- 903
-> -- 884
-< -- 14
-+ -- 299
-- -- 276
-* -- 910
-:= -- 1957
-add.period$ -- 19
-call.type$ -- 19
-change.case$ -- 165
-chr.to.int$ -- 19
-cite$ -- 19
-duplicate$ -- 347
-empty$ -- 569
-format.name$ -- 333
-if$ -- 2202
-int.to.chr$ -- 1
+            922 strings with 12987 characters,
+and the built_in function-call counts, 20842 in all, are:
+= -- 1718
+> -- 1753
+< -- 17
++ -- 592
+- -- 549
+* -- 1791
+:= -- 3803
+add.period$ -- 37
+call.type$ -- 37
+change.case$ -- 320
+chr.to.int$ -- 35
+cite$ -- 37
+duplicate$ -- 676
+empty$ -- 1067
+format.name$ -- 649
+if$ -- 4180
+int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 17
-newline$ -- 61
-num.names$ -- 76
-pop$ -- 162
+missing$ -- 35
+newline$ -- 115
+num.names$ -- 148
+pop$ -- 299
 preamble$ -- 1
-purify$ -- 165
+purify$ -- 320
 quote$ -- 0
-skip$ -- 389
+skip$ -- 712
 stack$ -- 0
-substring$ -- 623
-swap$ -- 2
+substring$ -- 1091
+swap$ -- 5
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 171
+type$ -- 333
 warning$ -- 0
-while$ -- 74
+while$ -- 146
 width$ -- 0
-write$ -- 190
+write$ -- 370
